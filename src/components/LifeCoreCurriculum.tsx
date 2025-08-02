@@ -186,11 +186,11 @@ const WorkshopCard = ({ workshop, bgColor }: { workshop: string, bgColor: string
           />
           <div className="absolute inset-0 bg-gradient-to-t from-lifecore-navy/60 to-transparent"></div>
           
-          {/* Play button overlay for linked videos */}
+          {/* Small play button in top left for linked videos */}
           {hasLink && (
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="bg-white/90 rounded-full p-2 shadow-lg">
-                <svg className="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
+            <div className="absolute top-1 left-1">
+              <div className="bg-white/90 rounded-full p-1 shadow-md">
+                <svg className="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M8 5v14l11-7z"/>
                 </svg>
               </div>
