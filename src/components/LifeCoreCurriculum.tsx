@@ -209,7 +209,8 @@ const workshopLinks = {
   "Startup Founder": "https://www.youtube.com/watch?v=B10wOUFDAIk",
   "Spartan Race Finisher": "https://www.youtube.com/watch?v=W9V0dsmhsv8",
   "Podcast Host": "/lovable-uploads/5e29f922-2918-4b7a-a004-1b6991d9e9c9.png",
-  "Water for Life Project": "https://vimeo.com/837039532"
+  "Water for Life Project": "https://vimeo.com/837039532",
+  "Family Theatre": "/lovable-uploads/85c4adfe-dd3b-4698-bede-d32953c3b0ae.png"
 };
 
 const WorkshopCard = ({ workshop, bgColor }: { workshop: string, bgColor: string }) => {
