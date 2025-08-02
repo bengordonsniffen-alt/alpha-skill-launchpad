@@ -144,6 +144,7 @@ const workshopDescriptions = {
 };
 
 const workshopLinks = {
+  "Alpha News Live": "https://www.canva.com/design/DAGQfduIAsc/YgePlV7SiWLMI-MtSdGKuQ/watch?utm_content=DAGQfduIAsc&utm_campaign=designshare&utm_medium=link&utm_source=editor",
   "5-Mile Bike Challenge": "https://www.youtube.com/watch?v=GNVKlZ8Rcto",
   "Friendship Coordinator": "https://www.youtube.com/watch?v=MjziE_v_AIA",
   "Escape Room Expert": "https://www.youtube.com/watch?v=M34nou_PXMs",
