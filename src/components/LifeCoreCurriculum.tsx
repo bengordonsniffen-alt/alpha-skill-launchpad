@@ -192,7 +192,8 @@ const workshopLinks = {
   "Rubik's Cube Solver": "https://www.youtube.com/watch?v=TFtRq--ZKDs",
   "Business Launch Pad": "https://www.youtube.com/watch?v=4IL5TOk-2r4",
   "Code & Create Team": "https://www.youtube.com/watch?v=pUByfy0vcEs",
-  "Pirates & Sailing Crew": "https://www.youtube.com/watch?v=IxOR6gacPZ0"
+  "Pirates & Sailing Crew": "https://www.youtube.com/watch?v=IxOR6gacPZ0",
+  "LEGO Master Builder": "/lovable-uploads/ecabc4db-0d06-42fe-8d6f-a5a40c8a8a5c.png"
 };
 
 const WorkshopCard = ({ workshop, bgColor }: { workshop: string, bgColor: string }) => {
