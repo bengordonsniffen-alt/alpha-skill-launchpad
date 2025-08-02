@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+import MediaModal from './MediaModal';
 import teamworkImage from "@/assets/teamwork-leadership.jpg";
 import storytellingImage from "@/assets/storytelling-speaking.jpg";
 import entrepreneurshipImage from "@/assets/entrepreneurship-financial.jpg";
@@ -229,6 +231,8 @@ const workshopLinks = {
 };
 
 const WorkshopCard = ({ workshop, bgColor }: { workshop: string, bgColor: string }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  
   if (!workshop) {
     return <div className={`p-4 ${bgColor} rounded-lg min-h-[200px]`}></div>;
   }
@@ -243,65 +247,85 @@ const WorkshopCard = ({ workshop, bgColor }: { workshop: string, bgColor: string
   const isAIImage = hasLink && !isVideoLink && !isUploadedImage; // AI images are imported assets
   const isClickable = hasLink && !isAIImage; // Only videos and uploaded images are clickable
 
+  const getMediaType = (): 'youtube' | 'vimeo' | 'canva' | 'image' | 'upload' => {
+    const link = workshopLinks[workshop];
+    if (link.includes('youtube.com') || link.includes('youtu.be')) return 'youtube';
+    if (link.includes('vimeo.com')) return 'vimeo';
+    if (link.includes('canva.com')) return 'canva';
+    if (link.includes('/lovable-uploads/')) return 'upload';
+    return 'image';
+  };
+
   return (
-    <div 
-      className={`p-3 ${bgColor} rounded-lg min-h-[200px] transition-all duration-200 ${
-        hasLink ? (isClickable ? 'cursor-pointer hover:shadow-lg hover:scale-105 border-2 border-primary/20' : 'hover:shadow-lg hover:scale-105') : ''
-      }`}
-      onClick={() => {
-        if (isClickable) {
-          const link = workshopLinks[workshop];
-          if (link) {
-            window.open(link, '_blank');
+    <>
+      <div 
+        className={`p-3 ${bgColor} rounded-lg min-h-[200px] transition-all duration-200 ${
+          hasLink ? (isClickable ? 'cursor-pointer hover:shadow-lg hover:scale-105 border-2 border-primary/20' : 'hover:shadow-lg hover:scale-105') : ''
+        }`}
+        onClick={() => {
+          if (isClickable) {
+            setIsModalOpen(true);
           }
-        }
-      }}
-    >
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden h-full flex flex-col">
-        {/* Image section */}
-        <div className="relative h-24 overflow-hidden">
-          <img 
-            src={getWorkshopImage(workshop)} 
-            alt={displayTitle}
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-lifecore-navy/60 to-transparent"></div>
-          
-          {/* Small play button in top left for linked videos only */}
-          {isVideoLink && (
-            <div className="absolute top-1 left-1">
-              <div className="bg-white/90 rounded-full p-1 shadow-md">
-                <svg className="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z"/>
-                </svg>
+        }}
+      >
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden h-full flex flex-col">
+          {/* Image section */}
+          <div className="relative h-24 overflow-hidden">
+            <img 
+              src={getWorkshopImage(workshop)} 
+              alt={displayTitle}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-lifecore-navy/60 to-transparent"></div>
+            
+            {/* Small play button in top left for linked videos only */}
+            {isVideoLink && (
+              <div className="absolute top-1 left-1">
+                <div className="bg-white/90 rounded-full p-1 shadow-md">
+                  <svg className="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </div>
               </div>
+            )}
+            
+            <div className="absolute bottom-1 left-1 right-1">
+              <span className="text-xs font-medium text-white text-center leading-tight block">
+                {displayTitle}
+              </span>
             </div>
-          )}
-          
-          <div className="absolute bottom-1 left-1 right-1">
-            <span className="text-xs font-medium text-white text-center leading-tight block">
-              {displayTitle}
-            </span>
+            
+            {/* Link indicator badge for videos only */}
+            {isVideoLink && (
+              <div className="absolute top-1 right-1">
+                <div className="bg-primary text-white text-xs px-1.5 py-0.5 rounded-full font-medium">
+                  WATCH
+                </div>
+              </div>
+            )}
           </div>
           
-          {/* Link indicator badge for videos only */}
-          {isVideoLink && (
-            <div className="absolute top-1 right-1">
-              <div className="bg-primary text-white text-xs px-1.5 py-0.5 rounded-full font-medium">
-                WATCH
-              </div>
-            </div>
-          )}
-        </div>
-        
-        {/* Description section */}
-        <div className="p-2 flex-1 flex items-center">
-          <span className="text-xs text-gray-700 text-center leading-tight">
-            {displayDescription || "Hands-on life skills workshop designed to build real competence"}
-          </span>
+          {/* Description section */}
+          <div className="p-2 flex-1 flex items-center">
+            <span className="text-xs text-gray-700 text-center leading-tight">
+              {displayDescription || "Hands-on life skills workshop designed to build real competence"}
+            </span>
+          </div>
         </div>
       </div>
-    </div>
+
+      {/* Media Modal */}
+      {isClickable && (
+        <MediaModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          title={displayTitle}
+          description={displayDescription}
+          mediaUrl={workshopLinks[workshop]}
+          mediaType={getMediaType()}
+        />
+      )}
+    </>
   );
 };
 
