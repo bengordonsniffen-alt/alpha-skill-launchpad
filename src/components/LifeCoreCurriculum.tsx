@@ -4,7 +4,29 @@ import entrepreneurshipImage from "@/assets/entrepreneurship-financial.jpg";
 import relationshipImage from "@/assets/relationship-building.jpg";
 import gritImage from "@/assets/grit-hardwork.jpg";
 
+// Helper function to extract YouTube video ID from URL
+const getYouTubeVideoId = (url: string): string | null => {
+  const regex = /(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\n?#]+)/;
+  const match = url.match(regex);
+  return match ? match[1] : null;
+};
+
+// Helper function to generate YouTube thumbnail URL
+const getYouTubeThumbnail = (videoId: string): string => {
+  return `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+};
+
 const getWorkshopImage = (workshopName: string) => {
+  // Check if workshop has a YouTube link and use thumbnail
+  const youtubeLink = workshopLinks[workshopName];
+  if (youtubeLink) {
+    const videoId = getYouTubeVideoId(youtubeLink);
+    if (videoId) {
+      return getYouTubeThumbnail(videoId);
+    }
+  }
+  
+  // Fallback to existing image logic
   if (workshopName.includes("Team") || workshopName.includes("Leadership") || workshopName.includes("Fair Play") || workshopName.includes("Escape") || workshopName.includes("Camp") || workshopName.includes("Code") || workshopName.includes("Pirates") || workshopName.includes("Spartan")) {
     return teamworkImage;
   }
