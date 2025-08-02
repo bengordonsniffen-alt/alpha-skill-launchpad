@@ -366,7 +366,7 @@ const LifeCoreCurriculum = () => {
                 {grade === "PreK" ? "PreK" : `Grades ${grade}`}
               </div>
               <div className="text-base text-gray-600 mt-1 font-medium">
-                {grade === "PreK" ? "3-4 years" :
+                {grade === "PreK" ? "4 years" :
                  grade === "K-1" ? "5-6 years" :
                  grade === "2-3" ? "7-8 years" :
                  grade === "4-5" ? "9-10 years" :
@@ -382,6 +382,94 @@ const LifeCoreCurriculum = () => {
             <WorkshopCard workshop={subjects["Grit/Hard Work"]} bgColor="bg-red-50" />
           </div>
         ))}
+        
+        {/* Share Bar */}
+        <div className="mt-16 pt-8 border-t border-gray-200">
+          <div className="text-center mb-6">
+            <h3 className="text-xl font-semibold text-lifecore-navy mb-2">Share the Life Skills Curriculum</h3>
+            <p className="text-gray-600">Help other families discover these transformative life skills workshops</p>
+          </div>
+          
+          <div className="flex justify-center items-center gap-4 flex-wrap">
+            <button 
+              onClick={() => {
+                const subject = "Check out this amazing Life Skills Curriculum";
+                const body = "I found this incredible curriculum that teaches real life skills to kids through hands-on workshops. Take a look: " + window.location.href;
+                window.location.href = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+              }}
+              className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+              Email
+            </button>
+            
+            <button 
+              onClick={() => {
+                const text = "Check out this amazing Life Skills Curriculum that teaches kids real-world skills through hands-on workshops!";
+                const url = window.location.href;
+                window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
+              }}
+              className="flex items-center gap-2 px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors"
+            >
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+              X (Twitter)
+            </button>
+            
+            <button 
+              onClick={() => {
+                const url = window.location.href;
+                const text = "Check out this amazing Life Skills Curriculum that teaches kids real-world skills through hands-on workshops!";
+                window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(text)}`, '_blank');
+              }}
+              className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+              Facebook
+            </button>
+            
+            <button 
+              onClick={() => {
+                const url = window.location.href;
+                const text = "Check out this amazing Life Skills Curriculum that teaches kids real-world skills through hands-on workshops!";
+                window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}&title=${encodeURIComponent(text)}`, '_blank');
+              }}
+              className="flex items-center gap-2 px-4 py-2 bg-blue-700 text-white rounded-lg hover:bg-blue-800 transition-colors"
+            >
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+              LinkedIn
+            </button>
+            
+            <button 
+              onClick={() => {
+                if (navigator.share) {
+                  navigator.share({
+                    title: 'Life Skills Curriculum',
+                    text: 'Check out this amazing curriculum that teaches kids real-world skills through hands-on workshops!',
+                    url: window.location.href
+                  });
+                } else {
+                  navigator.clipboard.writeText(window.location.href).then(() => {
+                    alert('Link copied to clipboard!');
+                  });
+                }
+              }}
+              className="flex items-center gap-2 px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
+            >
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/>
+              </svg>
+              Share
+            </button>
+          </div>
+        </div>
       </div>
     </section>
   );
