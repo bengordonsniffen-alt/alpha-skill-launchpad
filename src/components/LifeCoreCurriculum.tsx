@@ -59,37 +59,23 @@ const workshopNames = {
     "Relationship Building/Socialization": ["Global Teaching Ambassador"],
     "Grit/Hard Work": ["Spartan Race Finisher"]
   },
-  "9-12": {
-    "Teamwork/Leadership": [],
-    "Storytelling/Public Speaking": [],
-    "Entrepreneurship/Financial literacy": [],
-    "Relationship Building/Socialization": [],
-    "Grit/Hard Work": []
-  },
-  "All": {
-    "Teamwork/Leadership": [],
-    "Storytelling/Public Speaking": [],
-    "Entrepreneurship/Financial literacy": [],
-    "Relationship Building/Socialization": ["Chess Master"],
-    "Grit/Hard Work": []
-  }
 };
 
 const workshopDescriptions = {
-  "Magic Pets Challenge": "Follow multi-step directions as part of a team to care for magical classroom pets",
-  "Neighborhood Helpers": "Learn to help parents and community members with daily tasks",
-  "AI Theater Production": "Create and perform plays using AI tools like Frog and Toad adventures",
-  "LEGO Master Builder": "Build increasingly complex LEGO structures (100-500 pieces) while learning to fail and try again",
-  "Fair Play Academy": "Join games and learn to play fairly while building teamwork skills",
-  "Family Theater": "Put on theatrical productions for family audiences using Curtain Call methods",
-  "Alpha News Live": "Report live news stories for the school community",
-  "Water for Life Project": "Raise money and donate to provide lifetime water supplies for people in need",
-  "Friendship Coordinator": "Set up and manage your own playdates with friends",
+  "Magic Pets Challenge": "Follow directions to care for magical pets",
+  "Neighborhood Helpers": "Help parents and community with daily tasks",
+  "AI Theater Production": "Create plays using AI tools like Frog & Toad",
+  "LEGO Master Builder": "Build complex LEGO structures (100-500 pieces)",
+  "Fair Play Academy": "Join games and learn to play fairly",
+  "Family Theater": "Put on theatrical productions for families",
+  "Alpha News Live": "Report live news for school community",
+  "Water for Life Project": "Raise money for lifetime water supplies",
+  "Friendship Coordinator": "Set up and manage your own playdates",
   "5-Mile Bike Challenge": "Train to ride 5 miles without stopping",
   "Rock Wall Conqueror": "Climb a 40-foot rock wall successfully",
   "Puzzle Master": "Complete 100-piece puzzles independently",
   "Deep End Explorer": "Learn to swim confidently in deep water",
-  "Escape Room Expert": "Succeed in high-pressure escape rooms using 90% positive communication",
+  "Escape Room Expert": "Succeed in escape rooms with positive talk",
   "Camp Alpha Challenge": "Work with teammates on outdoor survival and team challenges",
   "Young Entrepreneur Pitch": "Develop sales skills by selling products to the public",
   "Social Connector": "Organize social events and help others build relationships",
@@ -111,7 +97,10 @@ const workshopDescriptions = {
   "Startup Founder": "Secure $10k in funding for your business venture",
   "Global Teaching Ambassador": "Teach life skills to kids in other countries using 2FL methods",
   "Spartan Race Finisher": "Complete full Spartan Race obstacles independently",
-  "Chess Master": "Develop strategic thinking and teach chess to others"
+};
+
+const workshopLinks = {
+  "5-Mile Bike Challenge": "https://www.youtube.com/watch?v=GNVKlZ8Rcto"
 };
 
 const WorkshopCard = ({ workshops, bgColor }: { workshops: string[], bgColor: string }) => {
@@ -124,7 +113,13 @@ const WorkshopCard = ({ workshops, bgColor }: { workshops: string[], bgColor: st
       {workshops.map((workshop, index) => (
         <div 
           key={index}
-          className="group relative h-16 w-full perspective-1000"
+          className="group relative h-16 w-full perspective-1000 cursor-pointer"
+          onClick={() => {
+            const link = workshopLinks[workshop];
+            if (link) {
+              window.open(link, '_blank');
+            }
+          }}
         >
           <div className="relative h-full w-full transition-transform duration-500 preserve-3d group-hover:rotate-y-180">
             {/* Front of card */}
@@ -163,10 +158,10 @@ const LifeCoreCurriculum = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-lifecore-navy mb-4">
             The LifeCore Curriculum Grid
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Hover over workshop cards to see detailed descriptions. Our systematic approach ensures 
-            every student develops essential life skills through age-appropriate, hands-on challenges.
-          </p>
+           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+             Hover over workshop cards to see descriptions. Click cards with links to watch videos. 
+             Our systematic approach ensures every student develops essential life skills.
+           </p>
         </div>
         
         <div className="overflow-x-auto">
