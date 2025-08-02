@@ -233,16 +233,21 @@ const WorkshopCard = ({ workshop, bgColor }: { workshop: string, bgColor: string
   const displayDescription = workshopDesc ? workshopDesc.trim() : workshopDescriptions[workshop];
   const hasLink = !!workshopLinks[workshop];
   const isVideoLink = hasLink && (workshopLinks[workshop].includes('youtube.com') || workshopLinks[workshop].includes('youtu.be') || workshopLinks[workshop].includes('canva.com') || workshopLinks[workshop].includes('vimeo.com'));
+  const isUploadedImage = hasLink && workshopLinks[workshop].includes('/lovable-uploads/');
+  const isAIImage = hasLink && !isVideoLink && !isUploadedImage; // AI images are imported assets
+  const isClickable = hasLink && !isAIImage; // Only videos and uploaded images are clickable
 
   return (
     <div 
       className={`p-3 ${bgColor} rounded-lg min-h-[200px] transition-all duration-200 ${
-        hasLink ? 'cursor-pointer hover:shadow-lg hover:scale-105 border-2 border-primary/20' : ''
+        hasLink ? (isClickable ? 'cursor-pointer hover:shadow-lg hover:scale-105 border-2 border-primary/20' : 'hover:shadow-lg hover:scale-105') : ''
       }`}
       onClick={() => {
-        const link = workshopLinks[workshop];
-        if (link) {
-          window.open(link, '_blank');
+        if (isClickable) {
+          const link = workshopLinks[workshop];
+          if (link) {
+            window.open(link, '_blank');
+          }
         }
       }}
     >
