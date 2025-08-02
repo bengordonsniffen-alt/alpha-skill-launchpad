@@ -65,7 +65,7 @@ const LifeCoreHero = () => {
             </div>
             <div className="text-center md:text-left">
               <div className="text-3xl font-bold text-lifecore-light-blue">5 Core</div>
-              <div className="text-sm text-gray-300">Life Skills Areas</div>
+              <div className="text-sm text-gray-300">Life Skill Areas</div>
             </div>
           </div>
         </div>

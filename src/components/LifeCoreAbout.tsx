@@ -9,23 +9,28 @@ const features = [
   },
   {
     icon: Target,
-    title: "Tangible Outcomes",
-    description: "Students don't just learn about skills—they demonstrate mastery through real-world achievements like running businesses, giving TED talks, and completing triathlons."
+    title: "Real-Stakes Practice",
+    description: "Life skills should be practiced 'in the wild' with real stakes. Students run actual businesses, give TED talks to live audiences, and complete real challenges."
   },
   {
     icon: Users,
-    title: "Progressive Development",
-    description: "Our curriculum grows with your child, from simple teamwork in PreK to leading complex projects in high school."
+    title: "Direct Instruction",
+    description: "Life skills can be developed through direct instruction and consistent practice. We teach systematically, not hope they pick it up."
   },
   {
     icon: BookOpen,
-    title: "Active Learning",
-    description: "We believe life skills must be taught actively, not passively. Students learn by doing, not just by listening."
+    title: "Measurable Development",
+    description: "Life skills can be measured and assessed across different situations. We track progress and ensure mastery, not just participation."
   },
   {
     icon: Heart,
-    title: "Whole Child Focus",
-    description: "While others race through content, we develop character, confidence, and competence that lasts a lifetime."
+    title: "Interconnected Skills",
+    description: "Life skills are interconnected abilities, not isolated traits. Students see how teamwork enhances speaking, how grit supports relationships."
+  },
+  {
+    icon: Target,
+    title: "Limitless Potential",
+    description: "All kids have limitless potential to master any life skill with the right instruction, practice, and motivation. Individual variability is the rule, not the exception."
   }
 ];
 
@@ -35,7 +40,7 @@ const LifeCoreAbout = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-lifecore-navy mb-4">
-            Why LifeCore Works
+            Why Alpha Works
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Traditional schools try to cram everything into an impossible schedule. 
@@ -68,7 +73,7 @@ const LifeCoreAbout = () => {
         <div className="bg-lifecore-navy rounded-2xl p-8 md:p-12 text-white">
           <div className="text-center mb-8">
             <h3 className="text-2xl md:text-3xl font-bold mb-4">
-              The LifeCore Difference
+              The Alpha Difference
             </h3>
             <p className="text-lifecore-light-blue text-lg">
               Real results from real families who chose a better way

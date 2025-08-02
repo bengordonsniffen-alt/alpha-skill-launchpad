@@ -155,7 +155,7 @@ const workshopLinks = {
 
 const WorkshopCard = ({ workshop, bgColor }: { workshop: string, bgColor: string }) => {
   if (!workshop) {
-    return <div className={`p-4 ${bgColor} rounded-lg aspect-square min-h-[150px]`}></div>;
+    return <div className={`p-4 ${bgColor} rounded-lg min-h-[200px]`}></div>;
   }
 
   // Split workshop name and description if it contains a colon
@@ -164,38 +164,36 @@ const WorkshopCard = ({ workshop, bgColor }: { workshop: string, bgColor: string
   const displayDescription = workshopDesc ? workshopDesc.trim() : workshopDescriptions[workshop];
 
   return (
-    <div className={`p-4 ${bgColor} rounded-lg aspect-square min-h-[150px]`}>
-      <div 
-        className="group relative h-full w-full perspective-1000 cursor-pointer"
-        onClick={() => {
-          const link = workshopLinks[workshop];
-          if (link) {
-            window.open(link, '_blank');
-          }
-        }}
-      >
-        <div className="relative h-full w-full transition-transform duration-500 preserve-3d group-hover:rotate-y-180">
-          {/* Front of card */}
-          <div className="absolute inset-0 w-full h-full backface-hidden bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
-            <img 
-              src={getWorkshopImage(workshop)} 
-              alt={displayTitle}
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-lifecore-navy/60 to-transparent"></div>
-            <div className="absolute bottom-2 left-2 right-2">
-              <span className="text-sm font-medium text-white text-center leading-tight block">
-                {displayTitle}
-              </span>
-            </div>
-          </div>
-          
-          {/* Back of card */}
-          <div className="absolute inset-0 w-full h-full backface-hidden rotate-y-180 bg-lifecore-navy rounded-lg shadow-sm flex items-center justify-center p-3">
-            <span className="text-sm text-white text-center leading-tight">
-              {displayDescription || "Hands-on life skills workshop designed to build real competence"}
+    <div 
+      className={`p-3 ${bgColor} rounded-lg min-h-[200px] cursor-pointer hover:shadow-md transition-shadow duration-200`}
+      onClick={() => {
+        const link = workshopLinks[workshop];
+        if (link) {
+          window.open(link, '_blank');
+        }
+      }}
+    >
+      <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden h-full flex flex-col">
+        {/* Image section */}
+        <div className="relative h-24 overflow-hidden">
+          <img 
+            src={getWorkshopImage(workshop)} 
+            alt={displayTitle}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-lifecore-navy/60 to-transparent"></div>
+          <div className="absolute bottom-1 left-1 right-1">
+            <span className="text-xs font-medium text-white text-center leading-tight block">
+              {displayTitle}
             </span>
           </div>
+        </div>
+        
+        {/* Description section */}
+        <div className="p-2 flex-1 flex items-center">
+          <span className="text-xs text-gray-700 text-center leading-tight">
+            {displayDescription || "Hands-on life skills workshop designed to build real competence"}
+          </span>
         </div>
       </div>
     </div>
@@ -208,11 +206,10 @@ const LifeCoreCurriculum = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-lifecore-navy mb-4">
-            The LifeCore Curriculum Grid
+            The Life Skills Curriculum
           </h2>
            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-             Hover over workshop cards to see descriptions. Click cards with links to watch videos. 
-             Our systematic approach ensures every student develops essential life skills.
+             Explore example workshops for each of the life skills below. Click the cards with links to see the Alpha difference and watch our students in action.
            </p>
         </div>
         
