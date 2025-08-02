@@ -192,20 +192,30 @@ const LifeCoreCurriculum = () => {
             {/* Header */}
             <div className="grid grid-cols-6 gap-2 mb-4">
               <div className="font-bold text-lifecore-navy text-center p-4">Grade Level</div>
-              <div className="font-bold text-lifecore-navy text-center p-4 bg-blue-50 rounded-lg">
-                Teamwork<br/>+<br/>Leadership
+              <div className="font-bold text-lifecore-navy text-center p-4 bg-blue-50 rounded-lg flex flex-col justify-center items-center leading-tight">
+                <div>Teamwork</div>
+                <div className="text-sm my-1">+</div>
+                <div>Leadership</div>
               </div>
-              <div className="font-bold text-lifecore-navy text-center p-4 bg-green-50 rounded-lg">
-                Storytelling<br/>+<br/>Public Speaking
+              <div className="font-bold text-lifecore-navy text-center p-4 bg-green-50 rounded-lg flex flex-col justify-center items-center leading-tight">
+                <div>Storytelling</div>
+                <div className="text-sm my-1">+</div>
+                <div>Public Speaking</div>
               </div>
-              <div className="font-bold text-lifecore-navy text-center p-4 bg-yellow-50 rounded-lg">
-                Entrepreneurship<br/>+<br/>Financial Literacy
+              <div className="font-bold text-lifecore-navy text-center p-4 bg-yellow-50 rounded-lg flex flex-col justify-center items-center leading-tight">
+                <div>Entrepreneurship</div>
+                <div className="text-sm my-1">+</div>
+                <div>Financial Literacy</div>
               </div>
-              <div className="font-bold text-lifecore-navy text-center p-4 bg-purple-50 rounded-lg">
-                Relationship Building<br/>+<br/>Socialization
+              <div className="font-bold text-lifecore-navy text-center p-4 bg-purple-50 rounded-lg flex flex-col justify-center items-center leading-tight">
+                <div>Relationship Building</div>
+                <div className="text-sm my-1">+</div>
+                <div>Socialization</div>
               </div>
-              <div className="font-bold text-lifecore-navy text-center p-4 bg-red-50 rounded-lg">
-                Grit<br/>+<br/>Hard Work
+              <div className="font-bold text-lifecore-navy text-center p-4 bg-red-50 rounded-lg flex flex-col justify-center items-center leading-tight">
+                <div>Grit</div>
+                <div className="text-sm my-1">+</div>
+                <div>Hard Work</div>
               </div>
             </div>
             
