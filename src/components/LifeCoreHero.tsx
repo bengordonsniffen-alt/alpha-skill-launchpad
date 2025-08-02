@@ -58,7 +58,7 @@ const LifeCoreHero = () => {
               onClick={scrollToApplication}
               className="text-lg px-8 py-4"
             >
-              Apply Now
+              Learn More
             </Button>
           </div>
           

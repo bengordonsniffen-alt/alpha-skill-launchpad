@@ -78,8 +78,7 @@ const LifeCoreApplication = () => {
             Ready to Transform Your Child's Education?
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Submit your application below and join families who've discovered what education 
-            looks like when life skills take center stage.
+            Get in touch to learn more about Alpha School and how you can provide your child with an education built for the future.
           </p>
         </div>
 
@@ -277,11 +276,8 @@ const LifeCoreApplication = () => {
                   size="lg" 
                   className="w-full text-lg py-4"
                 >
-                  Submit Application
+                  Submit
                 </Button>
-                <p className="text-sm text-gray-600 text-center mt-4">
-                  We'll review your application and contact you within 24 hours to schedule a conversation.
-                </p>
               </div>
             </form>
           </CardContent>
