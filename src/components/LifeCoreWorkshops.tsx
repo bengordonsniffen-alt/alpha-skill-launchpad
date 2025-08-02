@@ -71,15 +71,13 @@ const LifeCoreWorkshops = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 max-w-6xl mx-auto">
           {workshops.map((workshop, index) => (
             <article 
               key={workshop.title}
               className={`group bg-white rounded-xl shadow-soft hover:shadow-elegant transition-all duration-300 overflow-hidden ${
-                index === 3 ? 'lg:col-start-2' : ''
-              } ${index === 4 ? 'lg:col-start-3' : ''} ${
-                index < 3 ? 'lg:col-span-1' : 'lg:col-span-1'
-              }`}
+                index < 3 ? 'lg:col-span-2' : 'lg:col-span-2'
+              } ${index === 3 ? 'lg:col-start-2' : ''} ${index === 4 ? 'lg:col-start-4' : ''}`}
             >
               <div className="relative h-48 overflow-hidden">
                 <img 
