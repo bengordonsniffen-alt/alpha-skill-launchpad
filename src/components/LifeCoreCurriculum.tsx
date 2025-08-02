@@ -29,6 +29,10 @@ const getYouTubeVideoId = (url: string): string | null => {
 
 // Helper function to generate YouTube thumbnail URL
 const getYouTubeThumbnail = (videoId: string): string => {
+  // For Spartan Race video, use a different thumbnail frame
+  if (videoId === 'W9V0dsmhsv8') {
+    return `https://img.youtube.com/vi/${videoId}/1.jpg`; // Try frame 1
+  }
   return `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
 };
 
