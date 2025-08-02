@@ -178,7 +178,7 @@ const workshopNames = {
 
 const workshopDescriptions = {
   "Picnic Planners: Follow directions to plan a picnic for my class": "Plan an in-school playdate with a new friend",
-  "Question Club": "Learn to ask questions and listen to conduct parent interviews",
+  "Question Club": "Conduct heartfelt parent interviews",
   "Alpha Savers: Save school currency called Alphas": "Build early saving habits to spend and donate",
   "Playdate Pals: Learn to share and make friends": "Plan an in-school playdate with a new friend",
   "LEGO Master Builder": "Persist through failure to complete a 100+ piece LEGO set",
