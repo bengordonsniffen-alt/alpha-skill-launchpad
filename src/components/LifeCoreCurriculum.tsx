@@ -1,3 +1,28 @@
+import teamworkImage from "@/assets/teamwork-leadership.jpg";
+import storytellingImage from "@/assets/storytelling-speaking.jpg";
+import entrepreneurshipImage from "@/assets/entrepreneurship-financial.jpg";
+import relationshipImage from "@/assets/relationship-building.jpg";
+import gritImage from "@/assets/grit-hardwork.jpg";
+
+const getWorkshopImage = (workshopName: string) => {
+  if (workshopName.includes("Team") || workshopName.includes("Leadership") || workshopName.includes("Fair Play") || workshopName.includes("Escape") || workshopName.includes("Camp") || workshopName.includes("Code") || workshopName.includes("Pirates") || workshopName.includes("Spartan")) {
+    return teamworkImage;
+  }
+  if (workshopName.includes("Theater") || workshopName.includes("News") || workshopName.includes("Pitch") || workshopName.includes("Podcast") || workshopName.includes("TEDx") || workshopName.includes("Speaker")) {
+    return storytellingImage;
+  }
+  if (workshopName.includes("Water") || workshopName.includes("Business") || workshopName.includes("Stock") || workshopName.includes("Investment") || workshopName.includes("Startup")) {
+    return entrepreneurshipImage;
+  }
+  if (workshopName.includes("Friendship") || workshopName.includes("Social") || workshopName.includes("Community") || workshopName.includes("Teaching") || workshopName.includes("Chess")) {
+    return relationshipImage;
+  }
+  if (workshopName.includes("LEGO") || workshopName.includes("Challenge") || workshopName.includes("Bike") || workshopName.includes("Rock") || workshopName.includes("Puzzle") || workshopName.includes("Deep") || workshopName.includes("5K") || workshopName.includes("Rubik") || workshopName.includes("Triathlete") || workshopName.includes("Climber") || workshopName.includes("FBI") || workshopName.includes("Race")) {
+    return gritImage;
+  }
+  return teamworkImage; // Default fallback
+};
+
 const workshopNames = {
   "PreK": {
     "Teamwork/Leadership": ["Magic Pets Challenge", "Neighborhood Helpers", "AI Theater Production"],
@@ -103,10 +128,18 @@ const WorkshopCard = ({ workshops, bgColor }: { workshops: string[], bgColor: st
         >
           <div className="relative h-full w-full transition-transform duration-500 preserve-3d group-hover:rotate-y-180">
             {/* Front of card */}
-            <div className="absolute inset-0 w-full h-full backface-hidden bg-white rounded-lg shadow-sm border border-gray-200 flex items-center justify-center p-2">
-              <span className="text-xs font-medium text-lifecore-navy text-center leading-tight">
-                {workshop}
-              </span>
+            <div className="absolute inset-0 w-full h-full backface-hidden bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+              <img 
+                src={getWorkshopImage(workshop)} 
+                alt={workshop}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-lifecore-navy/60 to-transparent"></div>
+              <div className="absolute bottom-1 left-1 right-1">
+                <span className="text-xs font-medium text-white text-center leading-tight block">
+                  {workshop}
+                </span>
+              </div>
             </div>
             
             {/* Back of card */}

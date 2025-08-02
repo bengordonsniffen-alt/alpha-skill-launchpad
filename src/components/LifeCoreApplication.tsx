@@ -22,28 +22,48 @@ const LifeCoreApplication = () => {
     whyLifeCore: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the data to your backend
-    console.log("Application submitted:", formData);
-    toast({
-      title: "Application Submitted!",
-      description: "Thank you for your interest in LifeCore. We'll be in touch within 24 hours.",
-    });
     
-    // Reset form
-    setFormData({
-      parentName: "",
-      email: "",
-      phone: "",
-      childName: "",
-      childAge: "",
-      currentGrade: "",
-      previousSchool: "",
-      interests: "",
-      challenges: "",
-      whyLifeCore: ""
-    });
+    try {
+      const response = await fetch('/api/submit-to-hubspot', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ formData }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast({
+          title: "Application Submitted!",
+          description: "Thank you for your interest in LifeCore. We'll be in touch within 24 hours.",
+        });
+        setFormData({
+          parentName: "",
+          email: "",
+          phone: "",
+          childName: "",
+          childAge: "",
+          currentGrade: "",
+          previousSchool: "",
+          interests: "",
+          challenges: "",
+          whyLifeCore: ""
+        });
+      } else {
+        throw new Error(result.error || 'Submission failed');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast({
+        title: "Submission Error",
+        description: "There was an issue submitting your application. Please try again.",
+        variant: "destructive",
+      });
+    }
   };
 
   const handleChange = (field: string, value: string) => {
