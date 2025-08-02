@@ -386,8 +386,8 @@ const LifeCoreCurriculum = () => {
         {/* Share Bar */}
         <div className="mt-16 pt-8 border-t border-gray-200">
           <div className="text-center mb-6">
-            <h3 className="text-xl font-semibold text-lifecore-navy mb-2">Share the Life Skills Curriculum</h3>
-            <p className="text-gray-600">Help other families discover these transformative life skills workshops</p>
+            <h3 className="text-xl font-semibold text-lifecore-navy mb-2">Share the Alpha Life Skills Curriculum</h3>
+            <p className="text-gray-600">Help other families to discover the future of education</p>
           </div>
           
           <div className="flex justify-center items-center gap-4 flex-wrap">
