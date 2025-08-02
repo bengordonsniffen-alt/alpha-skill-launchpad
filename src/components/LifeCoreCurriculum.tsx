@@ -3,6 +3,22 @@ import storytellingImage from "@/assets/storytelling-speaking.jpg";
 import entrepreneurshipImage from "@/assets/entrepreneurship-financial.jpg";
 import relationshipImage from "@/assets/relationship-building.jpg";
 import gritImage from "@/assets/grit-hardwork.jpg";
+import picnicPlannersImage from "@/assets/picnic-planners.jpg";
+import parentReportingImage from "@/assets/parent-reporting.jpg";
+import legoMasterBuilderImage from "@/assets/lego-master-builder.jpg";
+import fairPlayAcademyImage from "@/assets/fair-play-academy.jpg";
+import familyTheatreImage from "@/assets/family-theatre.jpg";
+import waterForLifeProjectImage from "@/assets/water-for-life-project.jpg";
+import aiTeachingAssistantImage from "@/assets/ai-teaching-assistant.jpg";
+import alphaNewsLiveImage from "@/assets/alpha-news-live.jpg";
+import publicSalesChallengeImage from "@/assets/public-sales-challenge.jpg";
+import podcastHostImage from "@/assets/podcast-host.jpg";
+import outdoorChefImage from "@/assets/outdoor-chef.jpg";
+import fbiFitnessChallengeImage from "@/assets/fbi-fitness-challenge.jpg";
+import tedxSpeakerImage from "@/assets/tedx-speaker.jpg";
+import startupFounderImage from "@/assets/startup-founder.jpg";
+import globalTeachingAmbassadorImage from "@/assets/global-teaching-ambassador.jpg";
+import spartanRaceFinisherImage from "@/assets/spartan-race-finisher.jpg";
 
 // Helper function to extract YouTube video ID from URL
 const getYouTubeVideoId = (url: string): string | null => {
@@ -26,20 +42,38 @@ const getWorkshopImage = (workshopName: string) => {
     }
   }
   
-  // Fallback to existing image logic
-  if (workshopName.includes("Team") || workshopName.includes("Leadership") || workshopName.includes("Fair Play") || workshopName.includes("Escape") || workshopName.includes("Camp") || workshopName.includes("Code") || workshopName.includes("Pirates") || workshopName.includes("Spartan") || workshopName.includes("Picnic Planners")) {
+  // Use specific AI-generated images for workshops without YouTube links
+  if (workshopName.includes("Picnic Planners")) return picnicPlannersImage;
+  if (workshopName.includes("Parent Reporting")) return parentReportingImage;
+  if (workshopName.includes("LEGO Master Builder")) return legoMasterBuilderImage;
+  if (workshopName.includes("Fair Play Academy")) return fairPlayAcademyImage;
+  if (workshopName.includes("Family Theatre")) return familyTheatreImage;
+  if (workshopName.includes("Water for Life Project")) return waterForLifeProjectImage;
+  if (workshopName.includes("AI Teaching Assistant")) return aiTeachingAssistantImage;
+  if (workshopName.includes("Alpha News Live")) return alphaNewsLiveImage;
+  if (workshopName.includes("Public Sales Challenge")) return publicSalesChallengeImage;
+  if (workshopName.includes("Podcast Host")) return podcastHostImage;
+  if (workshopName.includes("Outdoor Chef")) return outdoorChefImage;
+  if (workshopName.includes("FBI Fitness Challenge")) return fbiFitnessChallengeImage;
+  if (workshopName.includes("TEDx Speaker")) return tedxSpeakerImage;
+  if (workshopName.includes("Startup Founder")) return startupFounderImage;
+  if (workshopName.includes("Global Teaching Ambassador")) return globalTeachingAmbassadorImage;
+  if (workshopName.includes("Spartan Race Finisher")) return spartanRaceFinisherImage;
+  
+  // Fallback to category images for any remaining workshops
+  if (workshopName.includes("Team") || workshopName.includes("Leadership") || workshopName.includes("Escape") || workshopName.includes("Camp") || workshopName.includes("Code") || workshopName.includes("Pirates")) {
     return teamworkImage;
   }
-  if (workshopName.includes("Theater") || workshopName.includes("Theatre") || workshopName.includes("News") || workshopName.includes("Pitch") || workshopName.includes("Podcast") || workshopName.includes("TEDx") || workshopName.includes("Speaker") || workshopName.includes("Parent Reporting")) {
+  if (workshopName.includes("Theater") || workshopName.includes("Theatre") || workshopName.includes("News") || workshopName.includes("Pitch")) {
     return storytellingImage;
   }
-  if (workshopName.includes("Water") || workshopName.includes("Business") || workshopName.includes("Stock") || workshopName.includes("Investment") || workshopName.includes("Startup") || workshopName.includes("Sales") || workshopName.includes("Public Sales")) {
+  if (workshopName.includes("Business") || workshopName.includes("Stock") || workshopName.includes("Investment") || workshopName.includes("Sales")) {
     return entrepreneurshipImage;
   }
-  if (workshopName.includes("Friendship") || workshopName.includes("Social") || workshopName.includes("Community") || workshopName.includes("Teaching") || workshopName.includes("Chess") || workshopName.includes("AI Teaching") || workshopName.includes("Outdoor Chef")) {
+  if (workshopName.includes("Friendship") || workshopName.includes("Social") || workshopName.includes("Community") || workshopName.includes("Teaching") || workshopName.includes("Chess")) {
     return relationshipImage;
   }
-  if (workshopName.includes("LEGO") || workshopName.includes("Challenge") || workshopName.includes("Bike") || workshopName.includes("Rock") || workshopName.includes("Puzzle") || workshopName.includes("Deep") || workshopName.includes("5K") || workshopName.includes("Rubik") || workshopName.includes("Triathlete") || workshopName.includes("Climber") || workshopName.includes("FBI") || workshopName.includes("Race") || workshopName.includes("Spartan")) {
+  if (workshopName.includes("Challenge") || workshopName.includes("Bike") || workshopName.includes("Rock") || workshopName.includes("Puzzle") || workshopName.includes("Deep") || workshopName.includes("5K") || workshopName.includes("Rubik") || workshopName.includes("Triathlete") || workshopName.includes("Climber") || workshopName.includes("Race")) {
     return gritImage;
   }
   return teamworkImage; // Default fallback
@@ -115,7 +149,8 @@ const workshopLinks = {
   "Escape Room Expert": "https://www.youtube.com/watch?v=M34nou_PXMs",
   "Rubik's Cube Solver": "https://www.youtube.com/watch?v=TFtRq--ZKDs",
   "Business Launch Pad": "https://www.youtube.com/watch?v=4IL5TOk-2r4",
-  "Code & Create Team": "https://www.youtube.com/watch?v=pUByfy0vcEs"
+  "Code & Create Team": "https://www.youtube.com/watch?v=pUByfy0vcEs",
+  "Pirates & Sailing Crew": "https://www.youtube.com/watch?v=IxOR6gacPZ0"
 };
 
 const WorkshopCard = ({ workshop, bgColor }: { workshop: string, bgColor: string }) => {
