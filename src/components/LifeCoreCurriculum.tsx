@@ -57,6 +57,11 @@ const getVimeoThumbnail = (url: string): string => {
 
 // Helper function to get media preview from any supported platform
 const getMediaPreview = (url: string): string | null => {
+  // Handle direct image URLs (uploaded files)
+  if (url.startsWith('/lovable-uploads/') || url.startsWith('/') || url.includes('.png') || url.includes('.jpg') || url.includes('.jpeg')) {
+    return url;
+  }
+  
   if (url.includes('youtube.com') || url.includes('youtu.be')) {
     const videoId = getYouTubeVideoId(url);
     return videoId ? getYouTubeThumbnail(videoId) : null;
