@@ -202,6 +202,12 @@ const workshopDescriptions = {
 };
 
 const workshopLinks = {
+  "Picnic Planners: Follow directions to plan a picnic for my class": picnicPlannersImage,
+  "Parent Reporting": parentReportingImage,
+  "Fair Play Academy": fairPlayAcademyImage,
+  "AI Teaching Assistant: Use AI to teach a classmate a skill": aiTeachingAssistantImage,
+  "Outdoor Chef: Plan and cook my own meals on a 3-day camping trip": outdoorChefImage,
+  "FBI Fitness Challenge": fbiFitnessChallengeImage,
   "Alpha News Live": alphaNewsLiveRealisticImage,
   "Alpha Savers: Save school currency called Alphas": alphaSaversPreKImage,
   "Playdate Pals: Learn to share and make friends": playdatePalsPreKImage,
