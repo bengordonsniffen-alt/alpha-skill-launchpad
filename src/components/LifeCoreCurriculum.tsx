@@ -162,10 +162,13 @@ const WorkshopCard = ({ workshop, bgColor }: { workshop: string, bgColor: string
   const [workshopTitle, workshopDesc] = workshop.includes(':') ? workshop.split(':', 2) : [workshop, null];
   const displayTitle = workshopTitle.trim();
   const displayDescription = workshopDesc ? workshopDesc.trim() : workshopDescriptions[workshop];
+  const hasLink = !!workshopLinks[workshop];
 
   return (
     <div 
-      className={`p-3 ${bgColor} rounded-lg min-h-[200px] cursor-pointer hover:shadow-md transition-shadow duration-200`}
+      className={`p-3 ${bgColor} rounded-lg min-h-[200px] transition-all duration-200 ${
+        hasLink ? 'cursor-pointer hover:shadow-lg hover:scale-105 border-2 border-primary/20' : ''
+      }`}
       onClick={() => {
         const link = workshopLinks[workshop];
         if (link) {
@@ -182,11 +185,32 @@ const WorkshopCard = ({ workshop, bgColor }: { workshop: string, bgColor: string
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-lifecore-navy/60 to-transparent"></div>
+          
+          {/* Play button overlay for linked videos */}
+          {hasLink && (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="bg-white/90 rounded-full p-2 shadow-lg">
+                <svg className="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+            </div>
+          )}
+          
           <div className="absolute bottom-1 left-1 right-1">
             <span className="text-xs font-medium text-white text-center leading-tight block">
               {displayTitle}
             </span>
           </div>
+          
+          {/* Link indicator badge */}
+          {hasLink && (
+            <div className="absolute top-1 right-1">
+              <div className="bg-primary text-white text-xs px-1.5 py-0.5 rounded-full font-medium">
+                WATCH
+              </div>
+            </div>
+          )}
         </div>
         
         {/* Description section */}
@@ -217,7 +241,7 @@ const LifeCoreCurriculum = () => {
           <div className="min-w-[800px]">
             {/* Header */}
             <div className="grid grid-cols-6 gap-2 mb-4">
-              <div className="font-bold text-lifecore-navy text-center p-4">Grade Level</div>
+              <div className="font-bold text-lifecore-navy text-center p-4"></div>
               <div className="font-bold text-lifecore-navy text-center p-4 bg-blue-50 rounded-lg flex flex-col justify-center items-center leading-tight">
                 <div>Teamwork</div>
                 <div className="text-sm my-1">+</div>
