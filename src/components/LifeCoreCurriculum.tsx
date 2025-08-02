@@ -237,74 +237,70 @@ const LifeCoreCurriculum = () => {
            </p>
         </div>
         
-        <div className="overflow-x-auto">
-          <div className="min-w-[800px]">
-            {/* Sticky Header */}
-            <div className="sticky top-0 z-10 bg-white/95 backdrop-blur-sm border-b border-gray-200 pb-4 mb-4">
-              <div className="grid grid-cols-6 gap-2">
-                <div className="font-bold text-lifecore-navy text-center p-4"></div>
-                <div className="font-bold text-lifecore-navy text-center p-4 bg-orange-50 rounded-lg flex flex-col justify-center items-center leading-tight">
-                  <div>Teamwork</div>
-                  <div className="text-sm my-1">+</div>
-                  <div>Leadership</div>
-                </div>
-                <div className="font-bold text-lifecore-navy text-center p-4 bg-green-50 rounded-lg flex flex-col justify-center items-center leading-tight">
-                  <div>Storytelling</div>
-                  <div className="text-sm my-1">+</div>
-                  <div>Public Speaking</div>
-                </div>
-                <div className="font-bold text-lifecore-navy text-center p-4 bg-yellow-50 rounded-lg flex flex-col justify-center items-center leading-tight">
-                  <div>Entrepreneurship</div>
-                  <div className="text-sm my-1">+</div>
-                  <div>Financial Literacy</div>
-                </div>
-                <div className="font-bold text-lifecore-navy text-center p-4 bg-purple-50 rounded-lg flex flex-col justify-center items-center leading-tight">
-                  <div>Relationship Building</div>
-                  <div className="text-sm my-1">+</div>
-                  <div>Socialization</div>
-                </div>
-                <div className="font-bold text-lifecore-navy text-center p-4 bg-red-50 rounded-lg flex flex-col justify-center items-center leading-tight">
-                  <div>Grit</div>
-                  <div className="text-sm my-1">+</div>
-                  <div>Hard Work</div>
-                </div>
+        {/* Sticky Header */}
+        <div className="sticky top-0 z-10 bg-white/95 backdrop-blur-sm border-b border-gray-200 pb-4 mb-4">
+          <div className="grid grid-cols-6 gap-2">
+            <div className="font-bold text-lifecore-navy text-center p-4"></div>
+            <div className="font-bold text-lifecore-navy text-center p-4 bg-orange-50 rounded-lg flex flex-col justify-center items-center leading-tight">
+              <div>Teamwork</div>
+              <div className="text-sm my-1">+</div>
+              <div>Leadership</div>
+            </div>
+            <div className="font-bold text-lifecore-navy text-center p-4 bg-green-50 rounded-lg flex flex-col justify-center items-center leading-tight">
+              <div>Storytelling</div>
+              <div className="text-sm my-1">+</div>
+              <div>Public Speaking</div>
+            </div>
+            <div className="font-bold text-lifecore-navy text-center p-4 bg-yellow-50 rounded-lg flex flex-col justify-center items-center leading-tight">
+              <div>Entrepreneurship</div>
+              <div className="text-sm my-1">+</div>
+              <div>Financial Literacy</div>
+            </div>
+            <div className="font-bold text-lifecore-navy text-center p-4 bg-purple-50 rounded-lg flex flex-col justify-center items-center leading-tight">
+              <div>Relationship Building</div>
+              <div className="text-sm my-1">+</div>
+              <div>Socialization</div>
+            </div>
+            <div className="font-bold text-lifecore-navy text-center p-4 bg-red-50 rounded-lg flex flex-col justify-center items-center leading-tight">
+              <div>Grit</div>
+              <div className="text-sm my-1">+</div>
+              <div>Hard Work</div>
+            </div>
+          </div>
+        </div>
+        
+        {/* Content Rows */}
+        {Object.entries(workshopNames).map(([grade, subjects]) => (
+          <div key={grade} className="grid grid-cols-6 gap-2 mb-2">
+            <div className={`p-4 rounded-lg font-semibold text-center flex flex-col justify-center items-center ${
+              grade === "PreK" ? "bg-lifecore-light-blue/20 text-lifecore-navy" :
+              grade === "K-1" ? "bg-lifecore-light-blue/30 text-lifecore-navy" :
+              grade === "2-3" ? "bg-lifecore-light-blue/40 text-lifecore-navy" :
+              grade === "4-5" ? "bg-lifecore-light-blue/50 text-lifecore-navy" :
+              grade === "6-8" ? "bg-lifecore-light-blue/60 text-lifecore-navy" :
+              grade === "9-12" ? "bg-lifecore-light-blue/70 text-lifecore-navy" :
+              "bg-gray-100 text-gray-800"
+            }`}>
+              <div className="leading-tight text-lg font-bold">
+                {grade === "PreK" ? "PreK" : `Grades ${grade}`}
+              </div>
+              <div className="text-base text-gray-600 mt-1 font-medium">
+                {grade === "PreK" ? "3-4 years" :
+                 grade === "K-1" ? "5-6 years" :
+                 grade === "2-3" ? "7-8 years" :
+                 grade === "4-5" ? "9-10 years" :
+                 grade === "6-8" ? "11-13 years" :
+                 ""}
               </div>
             </div>
             
-            {/* Content Rows */}
-            {Object.entries(workshopNames).map(([grade, subjects]) => (
-              <div key={grade} className="grid grid-cols-6 gap-2 mb-2">
-                <div className={`p-4 rounded-lg font-semibold text-center flex flex-col justify-center items-center ${
-                  grade === "PreK" ? "bg-lifecore-light-blue/20 text-lifecore-navy" :
-                  grade === "K-1" ? "bg-lifecore-light-blue/30 text-lifecore-navy" :
-                  grade === "2-3" ? "bg-lifecore-light-blue/40 text-lifecore-navy" :
-                  grade === "4-5" ? "bg-lifecore-light-blue/50 text-lifecore-navy" :
-                  grade === "6-8" ? "bg-lifecore-light-blue/60 text-lifecore-navy" :
-                  grade === "9-12" ? "bg-lifecore-light-blue/70 text-lifecore-navy" :
-                  "bg-gray-100 text-gray-800"
-                }`}>
-                  <div className="leading-tight text-lg font-bold">
-                    {grade === "PreK" ? "PreK" : `Grades ${grade}`}
-                  </div>
-                  <div className="text-base text-gray-600 mt-1 font-medium">
-                    {grade === "PreK" ? "3-4 years" :
-                     grade === "K-1" ? "5-6 years" :
-                     grade === "2-3" ? "7-8 years" :
-                     grade === "4-5" ? "9-10 years" :
-                     grade === "6-8" ? "11-13 years" :
-                     ""}
-                  </div>
-                </div>
-                
-                <WorkshopCard workshop={subjects["Teamwork/Leadership"]} bgColor="bg-orange-50" />
-                <WorkshopCard workshop={subjects["Storytelling/Public Speaking"]} bgColor="bg-green-50" />
-                <WorkshopCard workshop={subjects["Entrepreneurship/Financial literacy"]} bgColor="bg-yellow-50" />
-                <WorkshopCard workshop={subjects["Relationship Building/Socialization"]} bgColor="bg-purple-50" />
-                <WorkshopCard workshop={subjects["Grit/Hard Work"]} bgColor="bg-red-50" />
-              </div>
-            ))}
+            <WorkshopCard workshop={subjects["Teamwork/Leadership"]} bgColor="bg-orange-50" />
+            <WorkshopCard workshop={subjects["Storytelling/Public Speaking"]} bgColor="bg-green-50" />
+            <WorkshopCard workshop={subjects["Entrepreneurship/Financial literacy"]} bgColor="bg-yellow-50" />
+            <WorkshopCard workshop={subjects["Relationship Building/Socialization"]} bgColor="bg-purple-50" />
+            <WorkshopCard workshop={subjects["Grit/Hard Work"]} bgColor="bg-red-50" />
           </div>
-        </div>
+        ))}
       </div>
     </section>
   );
