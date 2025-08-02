@@ -201,7 +201,8 @@ const workshopLinks = {
   "LEGO Master Builder": "/lovable-uploads/ecabc4db-0d06-42fe-8d6f-a5a40c8a8a5c.png",
   "Public Sales Challenge: Sell to Strangers in Public": "/lovable-uploads/35cfa662-936f-40c9-99c4-2084c0ca6f27.png",
   "TEDx Speaker": "/lovable-uploads/49cef88c-c80c-4ebf-9059-d475408eb5cf.png",
-  "Startup Founder": "https://www.youtube.com/watch?v=B10wOUFDAIk"
+  "Startup Founder": "https://www.youtube.com/watch?v=B10wOUFDAIk",
+  "Spartan Race Finisher": "https://www.youtube.com/watch?v=W9V0dsmhsv8"
 };
 
 const WorkshopCard = ({ workshop, bgColor }: { workshop: string, bgColor: string }) => {
