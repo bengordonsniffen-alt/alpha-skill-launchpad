@@ -142,8 +142,8 @@ const workshopNames = {
   "PreK": {
     "Teamwork/Leadership": "Picnic Planners: Follow directions to plan a picnic for my class",
     "Storytelling/Public Speaking": "Question Club",
-    "Entrepreneurship/Financial literacy": "Alpha Savers: Save school currency called Alphas",
-    "Relationship Building/Socialization": "Playdate Pals: Learn to share and make friends",
+    "Entrepreneurship/Financial literacy": "Alpha Savers: Build early saving habits to spend and donate",
+    "Relationship Building/Socialization": "Playdate Pals: Plan an in-school playdate with a new friend",
     "Grit/Hard Work": "LEGO Master Builder"
   },
   "K-1": {
@@ -179,8 +179,8 @@ const workshopNames = {
 const workshopDescriptions = {
   "Picnic Planners: Follow directions to plan a picnic for my class": "Plan an in-school playdate with a new friend",
   "Question Club": "Conduct heartfelt parent interviews",
-  "Alpha Savers: Save school currency called Alphas": "Build early saving habits to spend and donate",
-  "Playdate Pals: Learn to share and make friends": "Plan an in-school playdate with a new friend",
+  "Alpha Savers: Build early saving habits to spend and donate": "Build early saving habits to spend and donate",
+  "Playdate Pals: Plan an in-school playdate with a new friend": "Plan an in-school playdate with a new friend",
   "LEGO Master Builder": "Persist through failure to complete a 100+ piece LEGO set",
   "Fair Play Academy": "Join games and learn to play fairly",
   "Family Theatre": "Put on theatrical productions for families",
@@ -212,8 +212,8 @@ const workshopLinks = {
   "Outdoor Chef: Plan and cook my own meals on a 3-day camping trip": outdoorChefImage,
   "FBI Fitness Challenge": fbiFitnessChallengeImage,
   "Alpha News Live": alphaNewsLiveRealisticImage,
-  "Alpha Savers: Save school currency called Alphas": alphaSaversPreKImage,
-  "Playdate Pals: Learn to share and make friends": playdatePalsPreKImage,
+  "Alpha Savers: Build early saving habits to spend and donate": alphaSaversPreKImage,
+  "Playdate Pals: Plan an in-school playdate with a new friend": playdatePalsPreKImage,
   "5-Mile Bike Challenge": "https://www.youtube.com/watch?v=GNVKlZ8Rcto",
   "Friendship Coordinator": "https://www.youtube.com/watch?v=MjziE_v_AIA",
   "Escape Room Expert": "https://www.youtube.com/watch?v=M34nou_PXMs",
