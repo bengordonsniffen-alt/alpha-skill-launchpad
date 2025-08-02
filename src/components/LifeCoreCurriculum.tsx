@@ -32,17 +32,57 @@ const getYouTubeThumbnail = (videoId: string): string => {
   return `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
 };
 
+// Helper function to get Canva preview image
+const getCanvaPreview = (url: string): string => {
+  // Extract design ID from Canva URL
+  const designIdMatch = url.match(/design\/([^\/]+)/);
+  if (designIdMatch) {
+    // Use Canva's thumbnail API
+    return `https://www.canva.com/api/media/designs/${designIdMatch[1]}/thumbnail/0?format=jpg&width=400&height=300`;
+  }
+  return "";
+};
+
+// Helper function to get Vimeo thumbnail
+const getVimeoThumbnail = (url: string): string => {
+  const vimeoIdMatch = url.match(/vimeo\.com\/(\d+)/);
+  if (vimeoIdMatch) {
+    // Note: Vimeo thumbnails require API calls, so we'll use a placeholder approach
+    // In a real implementation, you'd make an API call to get the actual thumbnail
+    return `https://vumbnail.com/${vimeoIdMatch[1]}.jpg`;
+  }
+  return "";
+};
+
+// Helper function to get media preview from any supported platform
+const getMediaPreview = (url: string): string | null => {
+  if (url.includes('youtube.com') || url.includes('youtu.be')) {
+    const videoId = getYouTubeVideoId(url);
+    return videoId ? getYouTubeThumbnail(videoId) : null;
+  }
+  
+  if (url.includes('canva.com')) {
+    return getCanvaPreview(url);
+  }
+  
+  if (url.includes('vimeo.com')) {
+    return getVimeoThumbnail(url);
+  }
+  
+  return null;
+};
+
 const getWorkshopImage = (workshopName: string) => {
-  // Check if workshop has a YouTube link and use thumbnail
-  const youtubeLink = workshopLinks[workshopName];
-  if (youtubeLink) {
-    const videoId = getYouTubeVideoId(youtubeLink);
-    if (videoId) {
-      return getYouTubeThumbnail(videoId);
+  // PRIORITY 1: Check if workshop has any media link and use preview
+  const mediaLink = workshopLinks[workshopName];
+  if (mediaLink) {
+    const mediaPreview = getMediaPreview(mediaLink);
+    if (mediaPreview) {
+      return mediaPreview;
     }
   }
   
-  // Use specific AI-generated images for workshops without YouTube links
+  // PRIORITY 2: Use specific AI-generated images ONLY for workshops without media links
   if (workshopName.includes("Picnic Planners")) return picnicPlannersImage;
   if (workshopName.includes("Parent Reporting")) return parentReportingImage;
   if (workshopName.includes("LEGO Master Builder")) return legoMasterBuilderImage;
@@ -50,7 +90,7 @@ const getWorkshopImage = (workshopName: string) => {
   if (workshopName.includes("Family Theatre")) return familyTheatreImage;
   if (workshopName.includes("Water for Life Project")) return waterForLifeProjectImage;
   if (workshopName.includes("AI Teaching Assistant")) return aiTeachingAssistantImage;
-  if (workshopName.includes("Alpha News Live")) return alphaNewsLiveImage;
+  // Note: Alpha News Live removed from AI images since it now has a media link
   if (workshopName.includes("Public Sales Challenge")) return publicSalesChallengeImage;
   if (workshopName.includes("Podcast Host")) return podcastHostImage;
   if (workshopName.includes("Outdoor Chef")) return outdoorChefImage;
@@ -60,7 +100,7 @@ const getWorkshopImage = (workshopName: string) => {
   if (workshopName.includes("Global Teaching Ambassador")) return globalTeachingAmbassadorImage;
   if (workshopName.includes("Spartan Race Finisher")) return spartanRaceFinisherImage;
   
-  // Fallback to category images for any remaining workshops
+  // PRIORITY 3: Fallback to category images for any remaining workshops
   if (workshopName.includes("Team") || workshopName.includes("Leadership") || workshopName.includes("Escape") || workshopName.includes("Camp") || workshopName.includes("Code") || workshopName.includes("Pirates")) {
     return teamworkImage;
   }
