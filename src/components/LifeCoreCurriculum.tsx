@@ -247,8 +247,8 @@ const WorkshopCard = ({ workshop, bgColor }: { workshop: string, bgColor: string
             </span>
           </div>
           
-          {/* Link indicator badge */}
-          {hasLink && (
+          {/* Link indicator badge for videos only */}
+          {isVideoLink && (
             <div className="absolute top-1 right-1">
               <div className="bg-primary text-white text-xs px-1.5 py-0.5 rounded-full font-medium">
                 WATCH
