@@ -13,8 +13,7 @@ const workshops = [
       "Succeed in high-pressure escape rooms and team challenges",
       "Lead teams and solve complex problems together",
       "Take initiative in group settings"
-    ],
-    skills: ["Multi-step direction following", "Team problem solving", "Leadership development", "Group communication"]
+    ]
   },
   {
     title: "Storytelling & Public Speaking",
@@ -24,8 +23,7 @@ const workshops = [
       "Make podcast appearances and media presentations",
       "Develop confidence and clear communication",
       "Engage any audience with compelling stories"
-    ],
-    skills: ["Confident presentation", "Story structure", "Audience engagement", "Media appearances"]
+    ]
   },
   {
     title: "Entrepreneurship & Financial Literacy",
@@ -35,8 +33,7 @@ const workshops = [
       "Create financial proposals and pitch to investors",
       "Gain real-world business experience early",
       "Understand how money works in the real world"
-    ],
-    skills: ["Business management", "Financial planning", "Investment pitching", "Money management"]
+    ]
   },
   {
     title: "Relationship Building & Socialization",
@@ -46,8 +43,7 @@ const workshops = [
       "Develop empathy and conflict resolution skills",
       "Work effectively with people from all backgrounds",
       "Organize and coordinate group activities"
-    ],
-    skills: ["Conflict resolution", "Empathy development", "Community organizing", "Cross-cultural communication"]
+    ]
   },
   {
     title: "Grit & Hard Work",
@@ -57,8 +53,7 @@ const workshops = [
       "Build with LEGOs to completing triathlons",
       "Solve complex puzzles that push limits",
       "Learn that persistence always pays off"
-    ],
-    skills: ["Persistence through challenges", "Physical endurance", "Complex problem solving", "Goal achievement"]
+    ]
   }
 ];
 
@@ -103,18 +98,6 @@ const LifeCoreWorkshops = () => {
                     </li>
                   ))}
                 </ul>
-                
-                <div>
-                  <h4 className="font-semibold text-lifecore-navy mb-3">Key Skills Developed:</h4>
-                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                    {workshop.skills.map((skill, skillIndex) => (
-                      <li key={skillIndex} className="flex items-center text-sm text-gray-600">
-                        <div className="w-2 h-2 bg-lifecore-light-blue rounded-full mr-3 flex-shrink-0"></div>
-                        {skill}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
               </div>
             </article>
           ))}
