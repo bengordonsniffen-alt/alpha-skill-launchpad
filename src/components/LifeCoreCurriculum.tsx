@@ -212,7 +212,7 @@ const LifeCoreCurriculum = () => {
             {/* Content Rows */}
             {Object.entries(workshopNames).map(([grade, subjects]) => (
               <div key={grade} className="grid grid-cols-6 gap-2 mb-2">
-                <div className={`p-4 rounded-lg font-semibold text-center ${
+                <div className={`p-4 rounded-lg font-semibold text-center flex flex-col justify-center items-center ${
                   grade === "PreK" ? "bg-purple-100 text-purple-800" :
                   grade === "K-1" ? "bg-blue-100 text-blue-800" :
                   grade === "2-3" ? "bg-green-100 text-green-800" :
@@ -221,7 +221,17 @@ const LifeCoreCurriculum = () => {
                   grade === "9-12" ? "bg-red-100 text-red-800" :
                   "bg-gray-100 text-gray-800"
                 }`}>
-                  {grade}
+                  <div className="leading-tight">
+                    {grade === "PreK" ? "PreK" : `Grades ${grade}`}
+                  </div>
+                  <div className="text-sm text-gray-600 mt-1 font-normal">
+                    {grade === "PreK" ? "3-4 years" :
+                     grade === "K-1" ? "5-6 years" :
+                     grade === "2-3" ? "7-8 years" :
+                     grade === "4-5" ? "9-10 years" :
+                     grade === "6-8" ? "11-13 years" :
+                     ""}
+                  </div>
                 </div>
                 
                 <WorkshopCard workshop={subjects["Teamwork/Leadership"]} bgColor="bg-blue-50" />
