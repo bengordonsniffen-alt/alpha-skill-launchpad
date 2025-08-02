@@ -242,7 +242,7 @@ const LifeCoreCurriculum = () => {
             {/* Header */}
             <div className="grid grid-cols-6 gap-2 mb-4">
               <div className="font-bold text-lifecore-navy text-center p-4"></div>
-              <div className="font-bold text-lifecore-navy text-center p-4 bg-blue-50 rounded-lg flex flex-col justify-center items-center leading-tight">
+              <div className="font-bold text-lifecore-navy text-center p-4 bg-orange-50 rounded-lg flex flex-col justify-center items-center leading-tight">
                 <div>Teamwork</div>
                 <div className="text-sm my-1">+</div>
                 <div>Leadership</div>
@@ -273,12 +273,12 @@ const LifeCoreCurriculum = () => {
             {Object.entries(workshopNames).map(([grade, subjects]) => (
               <div key={grade} className="grid grid-cols-6 gap-2 mb-2">
                 <div className={`p-4 rounded-lg font-semibold text-center flex flex-col justify-center items-center ${
-                  grade === "PreK" ? "bg-purple-100 text-purple-800" :
-                  grade === "K-1" ? "bg-blue-100 text-blue-800" :
-                  grade === "2-3" ? "bg-green-100 text-green-800" :
-                  grade === "4-5" ? "bg-yellow-100 text-yellow-800" :
-                  grade === "6-8" ? "bg-orange-100 text-orange-800" :
-                  grade === "9-12" ? "bg-red-100 text-red-800" :
+                  grade === "PreK" ? "bg-lifecore-light-blue/20 text-lifecore-navy" :
+                  grade === "K-1" ? "bg-lifecore-light-blue/30 text-lifecore-navy" :
+                  grade === "2-3" ? "bg-lifecore-light-blue/40 text-lifecore-navy" :
+                  grade === "4-5" ? "bg-lifecore-light-blue/50 text-lifecore-navy" :
+                  grade === "6-8" ? "bg-lifecore-light-blue/60 text-lifecore-navy" :
+                  grade === "9-12" ? "bg-lifecore-light-blue/70 text-lifecore-navy" :
                   "bg-gray-100 text-gray-800"
                 }`}>
                   <div className="leading-tight">
@@ -294,7 +294,7 @@ const LifeCoreCurriculum = () => {
                   </div>
                 </div>
                 
-                <WorkshopCard workshop={subjects["Teamwork/Leadership"]} bgColor="bg-blue-50" />
+                <WorkshopCard workshop={subjects["Teamwork/Leadership"]} bgColor="bg-orange-50" />
                 <WorkshopCard workshop={subjects["Storytelling/Public Speaking"]} bgColor="bg-green-50" />
                 <WorkshopCard workshop={subjects["Entrepreneurship/Financial literacy"]} bgColor="bg-yellow-50" />
                 <WorkshopCard workshop={subjects["Relationship Building/Socialization"]} bgColor="bg-purple-50" />
