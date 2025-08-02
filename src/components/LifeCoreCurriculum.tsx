@@ -119,6 +119,11 @@ const WorkshopCard = ({ workshop, bgColor }: { workshop: string, bgColor: string
     return <div className={`p-4 ${bgColor} rounded-lg aspect-square min-h-[150px]`}></div>;
   }
 
+  // Split workshop name and description if it contains a colon
+  const [workshopTitle, workshopDesc] = workshop.includes(':') ? workshop.split(':', 2) : [workshop, null];
+  const displayTitle = workshopTitle.trim();
+  const displayDescription = workshopDesc ? workshopDesc.trim() : workshopDescriptions[workshop];
+
   return (
     <div className={`p-4 ${bgColor} rounded-lg aspect-square min-h-[150px]`}>
       <div 
@@ -135,13 +140,13 @@ const WorkshopCard = ({ workshop, bgColor }: { workshop: string, bgColor: string
           <div className="absolute inset-0 w-full h-full backface-hidden bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
             <img 
               src={getWorkshopImage(workshop)} 
-              alt={workshop}
+              alt={displayTitle}
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-lifecore-navy/60 to-transparent"></div>
             <div className="absolute bottom-2 left-2 right-2">
               <span className="text-sm font-medium text-white text-center leading-tight block">
-                {workshop}
+                {displayTitle}
               </span>
             </div>
           </div>
@@ -149,7 +154,7 @@ const WorkshopCard = ({ workshop, bgColor }: { workshop: string, bgColor: string
           {/* Back of card */}
           <div className="absolute inset-0 w-full h-full backface-hidden rotate-y-180 bg-lifecore-navy rounded-lg shadow-sm flex items-center justify-center p-3">
             <span className="text-sm text-white text-center leading-tight">
-              {workshopDescriptions[workshop] || "Hands-on life skills workshop designed to build real competence"}
+              {displayDescription || "Hands-on life skills workshop designed to build real competence"}
             </span>
           </div>
         </div>
