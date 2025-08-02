@@ -10,7 +10,7 @@ const features = [
   {
     icon: Target,
     title: "Real-Stakes Practice",
-    description: "Life skills should be practiced 'in the wild' with real stakes. Students run actual businesses, give TED talks to live audiences, and complete real challenges."
+    description: "Students practice life skills in real-world settings with genuine consequences - like running actual businesses, delivering TED talks to live audiences, and tackling meaningful community challenges."
   },
   {
     icon: Users,
