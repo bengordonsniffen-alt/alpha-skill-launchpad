@@ -9,50 +9,45 @@ const workshops = [
     title: "Teamwork & Leadership",
     image: teamworkImage,
     description: [
-      "Follow multi-step directions from PreK through middle school",
-      "Succeed in high-pressure escape rooms and team challenges",
-      "Lead teams and solve complex problems together",
-      "Take initiative in group settings"
+      "Follow complex directions",
+      "Lead team problem solving",
+      "Take initiative in groups"
     ]
   },
   {
     title: "Storytelling & Public Speaking",
     image: storytellingImage,
     description: [
-      "Progress from simple show-and-tell to TED talks",
-      "Make podcast appearances and media presentations",
-      "Develop confidence and clear communication",
-      "Engage any audience with compelling stories"
+      "Present confidently to any audience",
+      "Deliver TED talks and podcasts",
+      "Engage with compelling stories"
     ]
   },
   {
     title: "Entrepreneurship & Financial Literacy",
     image: entrepreneurshipImage,
     description: [
-      "Run actual businesses and manage real money",
-      "Create financial proposals and pitch to investors",
-      "Gain real-world business experience early",
-      "Understand how money works in the real world"
+      "Run real businesses",
+      "Manage money and investments",
+      "Pitch ideas to investors"
     ]
   },
   {
     title: "Relationship Building & Socialization",
     image: relationshipImage,
     description: [
-      "Build genuine connections from playdates to community events",
-      "Develop empathy and conflict resolution skills",
-      "Work effectively with people from all backgrounds",
-      "Organize and coordinate group activities"
+      "Build genuine connections",
+      "Resolve conflicts with empathy",
+      "Organize community events"
     ]
   },
   {
     title: "Grit & Hard Work",
     image: gritImage,
     description: [
-      "Tackle increasingly challenging projects",
-      "Build with LEGOs to completing triathlons",
-      "Solve complex puzzles that push limits",
-      "Learn that persistence always pays off"
+      "Tackle challenging projects",
+      "Complete physical challenges",
+      "Persist through obstacles"
     ]
   }
 ];
