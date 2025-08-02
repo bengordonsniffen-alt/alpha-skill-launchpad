@@ -103,7 +103,7 @@ const getWorkshopImage = (workshopName: string) => {
   if (workshopName.includes("Picnic Planners")) return picnicPlannersImage;
   if (workshopName.includes("Alpha Savers")) return alphaSaversPreKImage;
   if (workshopName.includes("Playdate Pals")) return playdatePalsPreKImage;
-  if (workshopName.includes("Parent Reporting")) return parentReportingImage;
+  if (workshopName.includes("Question Club")) return parentReportingImage;
   if (workshopName.includes("LEGO Master Builder")) return "/lovable-uploads/ecabc4db-0d06-42fe-8d6f-a5a40c8a8a5c.png";
   if (workshopName.includes("Fair Play Academy")) return fairPlayAcademyImage;
   if (workshopName.includes("Family Theatre")) return familyTheatreImage;
@@ -141,7 +141,7 @@ const getWorkshopImage = (workshopName: string) => {
 const workshopNames = {
   "PreK": {
     "Teamwork/Leadership": "Picnic Planners: Follow directions to plan a picnic for my class",
-    "Storytelling/Public Speaking": "Parent Reporting",
+    "Storytelling/Public Speaking": "Question Club",
     "Entrepreneurship/Financial literacy": "Alpha Savers: Save school currency called Alphas",
     "Relationship Building/Socialization": "Playdate Pals: Learn to share and make friends",
     "Grit/Hard Work": "LEGO Master Builder"
@@ -178,7 +178,7 @@ const workshopNames = {
 
 const workshopDescriptions = {
   "Picnic Planners: Follow directions to plan a picnic for my class": "Plan an in-school playdate with a new friend",
-  "Parent Reporting": "Learn to ask questions and listen to conduct parent interviews",
+  "Question Club": "Learn to ask questions and listen to conduct parent interviews",
   "Alpha Savers: Save school currency called Alphas": "Build early saving habits to spend and donate",
   "Playdate Pals: Learn to share and make friends": "Plan an in-school playdate with a new friend",
   "LEGO Master Builder": "Persist through failure while building 100+ piece LEGO structures",
@@ -206,7 +206,7 @@ const workshopDescriptions = {
 
 const workshopLinks = {
   "Picnic Planners: Follow directions to plan a picnic for my class": picnicPlannersImage,
-  "Parent Reporting": parentReportingImage,
+  "Question Club": parentReportingImage,
   "Fair Play Academy": fairPlayAcademyImage,
   "AI Teaching Assistant: Use AI to teach a classmate a skill": aiTeachingAssistantImage,
   "Outdoor Chef: Plan and cook my own meals on a 3-day camping trip": outdoorChefImage,
