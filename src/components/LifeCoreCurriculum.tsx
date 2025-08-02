@@ -21,6 +21,7 @@ import globalTeachingAmbassadorImage from "@/assets/global-teaching-ambassador.j
 import spartanRaceFinisherImage from "@/assets/spartan-race-finisher.jpg";
 import alphaNewsLiveStudentsImage from "@/assets/alpha-news-live-students.jpg";
 import alphaNewsLiveRealisticImage from "@/assets/alpha-news-live-realistic.jpg";
+import alphaSaversPreKImage from "@/assets/alpha-savers-prek.jpg";
 
 // Helper function to extract YouTube video ID from URL
 const getYouTubeVideoId = (url: string): string | null => {
@@ -96,6 +97,7 @@ const getWorkshopImage = (workshopName: string) => {
   
   // PRIORITY 2: Use specific AI-generated images ONLY for workshops without media links
   if (workshopName.includes("Picnic Planners")) return picnicPlannersImage;
+  if (workshopName.includes("Alpha Savers")) return alphaSaversPreKImage;
   if (workshopName.includes("Parent Reporting")) return parentReportingImage;
   if (workshopName.includes("LEGO Master Builder")) return "/lovable-uploads/ecabc4db-0d06-42fe-8d6f-a5a40c8a8a5c.png";
   if (workshopName.includes("Fair Play Academy")) return fairPlayAcademyImage;
@@ -135,7 +137,7 @@ const workshopNames = {
   "PreK": {
     "Teamwork/Leadership": "Picnic Planners: Follow directions to plan a picnic for my class",
     "Storytelling/Public Speaking": "Parent Reporting",
-    "Entrepreneurship/Financial literacy": "",
+    "Entrepreneurship/Financial literacy": "Alpha Savers: Save school currency called Alphas",
     "Relationship Building/Socialization": "",
     "Grit/Hard Work": "LEGO Master Builder"
   },
@@ -172,6 +174,7 @@ const workshopNames = {
 const workshopDescriptions = {
   "Picnic Planners: Follow directions to plan a picnic for my class": "Plan and organize a complete class picnic",
   "Parent Reporting": "Learn to ask questions and listen to conduct parent interviews",
+  "Alpha Savers: Save school currency called Alphas": "Learn to save and count classroom currency called Alphas",
   "LEGO Master Builder": "Build complex LEGO structures (100-500 pieces)",
   "Fair Play Academy": "Join games and learn to play fairly",
   "Family Theatre": "Put on theatrical productions for families",
