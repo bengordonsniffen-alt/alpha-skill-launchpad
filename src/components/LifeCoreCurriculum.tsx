@@ -189,7 +189,7 @@ const workshopDescriptions = {
   "AI Teaching Assistant: Use AI to teach a classmate a skill": "Use AI tools to teach a peer a new skill",
   "5-Mile Bike Challenge": "Train to ride 5 miles without stopping",
   "Escape Room Expert": "Use uplifting language to beat an escape room as a team",
-  "Public Sales Challenge: Sell to Strangers in Public": "Develop confidence by selling to strangers",
+  "Public Sales Challenge: Sell to Strangers in Public": "Pitch and sell to new people in the real world",
   "Friendship Coordinator": "Set up and manage your own playdates",
   "Rubik's Cube Solver": "Independently solve a Rubik's cube",
   "Code & Create Team": "Code self-driving cars, drones, and video games with a partner",
