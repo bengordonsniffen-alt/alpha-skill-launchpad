@@ -86,7 +86,7 @@ const getWorkshopImage = (workshopName: string) => {
   // PRIORITY 2: Use specific AI-generated images ONLY for workshops without media links
   if (workshopName.includes("Picnic Planners")) return picnicPlannersImage;
   if (workshopName.includes("Parent Reporting")) return parentReportingImage;
-  if (workshopName.includes("LEGO Master Builder")) return legoMasterBuilderImage;
+  if (workshopName.includes("LEGO Master Builder")) return "/lovable-uploads/ecabc4db-0d06-42fe-8d6f-a5a40c8a8a5c.png";
   if (workshopName.includes("Fair Play Academy")) return fairPlayAcademyImage;
   if (workshopName.includes("Family Theatre")) return familyTheatreImage;
   if (workshopName.includes("Water for Life Project")) return waterForLifeProjectImage;
