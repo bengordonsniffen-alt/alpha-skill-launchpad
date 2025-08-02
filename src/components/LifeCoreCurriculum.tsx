@@ -319,7 +319,7 @@ const LifeCoreCurriculum = () => {
         </div>
         
         {/* Sticky Header */}
-        <div className="sticky top-0 z-10 bg-white/95 backdrop-blur-sm border-b border-gray-200 pb-4 mb-4">
+        <div className="sticky top-0 z-10 bg-gray-50/50 backdrop-blur-sm border-b border-gray-200 pb-4 mb-4">
           <div className="grid grid-cols-6 gap-2">
             <div className="font-bold text-lifecore-navy text-center p-4"></div>
             <div className="font-bold text-lifecore-navy text-center p-4 bg-orange-50 rounded-lg flex flex-col justify-center items-center leading-tight">
