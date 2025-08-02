@@ -86,7 +86,7 @@ const LifeCoreApplication = () => {
         <Card className="shadow-elegant border-0">
           <CardHeader className="text-center pb-6">
             <CardTitle className="text-2xl text-lifecore-navy">
-              LifeCore Application Form
+              Alpha School Interest Form
             </CardTitle>
           </CardHeader>
           
@@ -256,7 +256,7 @@ const LifeCoreApplication = () => {
                   
                   <div className="space-y-2">
                     <Label htmlFor="whyLifeCore" className="text-lifecore-navy font-medium">
-                      Why are you interested in LifeCore's approach to education? *
+                      Why are you interested in Alpha's approach to education? *
                     </Label>
                     <Textarea
                       id="whyLifeCore"

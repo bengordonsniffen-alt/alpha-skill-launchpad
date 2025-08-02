@@ -38,18 +38,18 @@ const LifeCoreHero = () => {
             <Button 
               variant="light" 
               size="lg" 
-              onClick={scrollToApplication}
-              className="text-lg px-8 py-4"
-            >
-              Apply Now
-            </Button>
-            <Button 
-              variant="light" 
-              size="lg" 
               onClick={() => document.getElementById('curriculum')?.scrollIntoView({ behavior: 'smooth' })}
               className="text-lg px-8 py-4"
             >
               See Our Curriculum
+            </Button>
+            <Button 
+              variant="light" 
+              size="lg" 
+              onClick={scrollToApplication}
+              className="text-lg px-8 py-4"
+            >
+              Apply Now
             </Button>
           </div>
           
