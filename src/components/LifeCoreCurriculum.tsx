@@ -27,19 +27,19 @@ const getWorkshopImage = (workshopName: string) => {
   }
   
   // Fallback to existing image logic
-  if (workshopName.includes("Team") || workshopName.includes("Leadership") || workshopName.includes("Fair Play") || workshopName.includes("Escape") || workshopName.includes("Camp") || workshopName.includes("Code") || workshopName.includes("Pirates") || workshopName.includes("Spartan")) {
+  if (workshopName.includes("Team") || workshopName.includes("Leadership") || workshopName.includes("Fair Play") || workshopName.includes("Escape") || workshopName.includes("Camp") || workshopName.includes("Code") || workshopName.includes("Pirates") || workshopName.includes("Spartan") || workshopName.includes("Picnic Planners")) {
     return teamworkImage;
   }
-  if (workshopName.includes("Theater") || workshopName.includes("News") || workshopName.includes("Pitch") || workshopName.includes("Podcast") || workshopName.includes("TEDx") || workshopName.includes("Speaker")) {
+  if (workshopName.includes("Theater") || workshopName.includes("Theatre") || workshopName.includes("News") || workshopName.includes("Pitch") || workshopName.includes("Podcast") || workshopName.includes("TEDx") || workshopName.includes("Speaker") || workshopName.includes("Parent Reporting")) {
     return storytellingImage;
   }
-  if (workshopName.includes("Water") || workshopName.includes("Business") || workshopName.includes("Stock") || workshopName.includes("Investment") || workshopName.includes("Startup")) {
+  if (workshopName.includes("Water") || workshopName.includes("Business") || workshopName.includes("Stock") || workshopName.includes("Investment") || workshopName.includes("Startup") || workshopName.includes("Sales") || workshopName.includes("Public Sales")) {
     return entrepreneurshipImage;
   }
-  if (workshopName.includes("Friendship") || workshopName.includes("Social") || workshopName.includes("Community") || workshopName.includes("Teaching") || workshopName.includes("Chess")) {
+  if (workshopName.includes("Friendship") || workshopName.includes("Social") || workshopName.includes("Community") || workshopName.includes("Teaching") || workshopName.includes("Chess") || workshopName.includes("AI Teaching") || workshopName.includes("Outdoor Chef")) {
     return relationshipImage;
   }
-  if (workshopName.includes("LEGO") || workshopName.includes("Challenge") || workshopName.includes("Bike") || workshopName.includes("Rock") || workshopName.includes("Puzzle") || workshopName.includes("Deep") || workshopName.includes("5K") || workshopName.includes("Rubik") || workshopName.includes("Triathlete") || workshopName.includes("Climber") || workshopName.includes("FBI") || workshopName.includes("Race")) {
+  if (workshopName.includes("LEGO") || workshopName.includes("Challenge") || workshopName.includes("Bike") || workshopName.includes("Rock") || workshopName.includes("Puzzle") || workshopName.includes("Deep") || workshopName.includes("5K") || workshopName.includes("Rubik") || workshopName.includes("Triathlete") || workshopName.includes("Climber") || workshopName.includes("FBI") || workshopName.includes("Race") || workshopName.includes("Spartan")) {
     return gritImage;
   }
   return teamworkImage; // Default fallback
@@ -47,75 +47,63 @@ const getWorkshopImage = (workshopName: string) => {
 
 const workshopNames = {
   "PreK": {
-    "Teamwork/Leadership": ["Magic Pets Challenge", "Neighborhood Helpers", "AI Theater Production"],
-    "Storytelling/Public Speaking": [],
-    "Entrepreneurship/Financial literacy": [],
-    "Relationship Building/Socialization": [],
-    "Grit/Hard Work": ["LEGO Master Builder"]
+    "Teamwork/Leadership": "Picnic Planners: Follow directions to plan a picnic for my class",
+    "Storytelling/Public Speaking": "Parent Reporting",
+    "Entrepreneurship/Financial literacy": "",
+    "Relationship Building/Socialization": "",
+    "Grit/Hard Work": "LEGO Master Builder"
   },
   "K-1": {
-    "Teamwork/Leadership": ["Fair Play Academy"],
-    "Storytelling/Public Speaking": ["Family Theater", "Alpha News Live"],
-    "Entrepreneurship/Financial literacy": ["Water for Life Project"],
-    "Relationship Building/Socialization": ["Friendship Coordinator"],
-    "Grit/Hard Work": ["5-Mile Bike Challenge", "Rock Wall Conqueror", "Puzzle Master", "Deep End Explorer"]
+    "Teamwork/Leadership": "Fair Play Academy",
+    "Storytelling/Public Speaking": "Family Theatre",
+    "Entrepreneurship/Financial literacy": "Water for Life Project",
+    "Relationship Building/Socialization": "AI Teaching Assistant: Use AI to teach a classmate a skill",
+    "Grit/Hard Work": "5-Mile Bike Challenge"
   },
   "2-3": {
-    "Teamwork/Leadership": ["Escape Room Expert", "Camp Alpha Challenge"],
-    "Storytelling/Public Speaking": ["Young Entrepreneur Pitch"],
-    "Entrepreneurship/Financial literacy": [],
-    "Relationship Building/Socialization": ["Social Connector"],
-    "Grit/Hard Work": ["5K Runner", "Rubik's Cube Solver", "Youth Triathlete"]
+    "Teamwork/Leadership": "Escape Room Expert",
+    "Storytelling/Public Speaking": "Alpha News Live",
+    "Entrepreneurship/Financial literacy": "Public Sales Challenge: Sell to Strangers in Public",
+    "Relationship Building/Socialization": "Friendship Coordinator",
+    "Grit/Hard Work": "Rubik's Cube Solver"
   },
   "4-5": {
-    "Teamwork/Leadership": ["Code & Create Team"],
-    "Storytelling/Public Speaking": ["Podcast Host"],
-    "Entrepreneurship/Financial literacy": ["Business Launch Pad"],
-    "Relationship Building/Socialization": ["Community Builder"],
-    "Grit/Hard Work": ["Via Ferrata Climber", "FBI Fitness Challenge"]
+    "Teamwork/Leadership": "Code & Create Team",
+    "Storytelling/Public Speaking": "Podcast Host",
+    "Entrepreneurship/Financial literacy": "Business Launch Pad",
+    "Relationship Building/Socialization": "Outdoor Chef: Plan and cook my own meals on a 3-day camping trip",
+    "Grit/Hard Work": "FBI Fitness Challenge"
   },
   "6-8": {
-    "Teamwork/Leadership": ["Pirates & Sailing Crew", "Spartan Team Challenge"],
-    "Storytelling/Public Speaking": ["Podcast Producer", "TEDx Speaker"],
-    "Entrepreneurship/Financial literacy": ["Stock Market Pro", "Investment Pitcher", "Startup Founder"],
-    "Relationship Building/Socialization": ["Global Teaching Ambassador"],
-    "Grit/Hard Work": ["Spartan Race Finisher"]
+    "Teamwork/Leadership": "Pirates & Sailing Crew",
+    "Storytelling/Public Speaking": "TEDx Speaker",
+    "Entrepreneurship/Financial literacy": "Startup Founder",
+    "Relationship Building/Socialization": "Global Teaching Ambassador",
+    "Grit/Hard Work": "Spartan Race Finisher"
   },
 };
 
 const workshopDescriptions = {
-  "Magic Pets Challenge": "Follow directions to care for magical pets",
-  "Neighborhood Helpers": "Help parents and community with daily tasks",
-  "AI Theater Production": "Create plays using AI tools like Frog & Toad",
+  "Picnic Planners: Follow directions to plan a picnic for my class": "Plan and organize a complete class picnic by following detailed instructions and coordinating with classmates",
+  "Parent Reporting": "Practice clear communication by reporting daily activities and learnings to parents",
   "LEGO Master Builder": "Build complex LEGO structures (100-500 pieces)",
   "Fair Play Academy": "Join games and learn to play fairly",
-  "Family Theater": "Put on theatrical productions for families",
+  "Family Theatre": "Put on theatrical productions for families",
   "Alpha News Live": "Report live news for school community",
   "Water for Life Project": "Raise money for lifetime water supplies",
-  "Friendship Coordinator": "Set up and manage your own playdates",
+  "AI Teaching Assistant: Use AI to teach a classmate a skill": "Leverage AI tools to help teach a peer a new skill or concept",
   "5-Mile Bike Challenge": "Train to ride 5 miles without stopping",
-  "Rock Wall Conqueror": "Climb a 40-foot rock wall successfully",
-  "Puzzle Master": "Complete 100-piece puzzles independently",
-  "Deep End Explorer": "Learn to swim confidently in deep water",
   "Escape Room Expert": "Succeed in escape rooms with positive talk",
-  "Camp Alpha Challenge": "Work with teammates on outdoor survival and team challenges",
-  "Young Entrepreneur Pitch": "Develop sales skills by selling products to the public",
-  "Social Connector": "Organize social events and help others build relationships",
-  "5K Runner": "Complete a 5K run in under 35 minutes",
+  "Public Sales Challenge: Sell to Strangers in Public": "Develop confidence and sales skills by approaching and selling to strangers",
+  "Friendship Coordinator": "Set up and manage your own playdates",
   "Rubik's Cube Solver": "Independently solve a Rubik's cube",
-  "Youth Triathlete": "Complete a full triathlon (swim, bike, run)",
   "Code & Create Team": "Build self-driving cars, drones, and video games with programming partners",
   "Podcast Host": "Book and host podcast appearances discussing your passions",
   "Business Launch Pad": "Launch and run a level-wide business like AirBnB or Food Truck operations",
-  "Community Builder": "Meet and connect with new students and community strangers through Hype Squad",
-  "Via Ferrata Climber": "Complete challenging via ferrata climbing routes",
+  "Outdoor Chef: Plan and cook my own meals on a 3-day camping trip": "Plan, shop for, and prepare all meals independently during a camping experience",
   "FBI Fitness Challenge": "Pass the FBI physical fitness test requirements",
   "Pirates & Sailing Crew": "Learn sailing in six weeks and earn group trips through teamwork",
-  "Spartan Team Challenge": "Cross Spartan Race finish lines with your teammates",
-  "Podcast Producer": "Conduct expert interviews and publish professional podcasts",
   "TEDx Speaker": "Deliver a compelling TEDx talk to live audiences",
-  "Stock Market Pro": "Learn to analyze and invest in stock markets",
-  "Investment Pitcher": "Create and pitch financial proposals for funding",
   "Startup Founder": "Secure $10k in funding for your business venture",
   "Global Teaching Ambassador": "Teach life skills to kids in other countries using 2FL methods",
   "Spartan Race Finisher": "Complete full Spartan Race obstacles independently",
@@ -126,49 +114,46 @@ const workshopLinks = {
   "Friendship Coordinator": "https://www.youtube.com/watch?v=MjziE_v_AIA"
 };
 
-const WorkshopCard = ({ workshops, bgColor }: { workshops: string[], bgColor: string }) => {
-  if (workshops.length === 0) {
-    return <div className={`p-4 ${bgColor} rounded-lg min-h-[120px]`}></div>;
+const WorkshopCard = ({ workshop, bgColor }: { workshop: string, bgColor: string }) => {
+  if (!workshop) {
+    return <div className={`p-4 ${bgColor} rounded-lg aspect-square min-h-[150px]`}></div>;
   }
 
   return (
-    <div className={`p-4 ${bgColor} rounded-lg min-h-[120px] space-y-2`}>
-      {workshops.map((workshop, index) => (
-        <div 
-          key={index}
-          className="group relative h-16 w-full perspective-1000 cursor-pointer"
-          onClick={() => {
-            const link = workshopLinks[workshop];
-            if (link) {
-              window.open(link, '_blank');
-            }
-          }}
-        >
-          <div className="relative h-full w-full transition-transform duration-500 preserve-3d group-hover:rotate-y-180">
-            {/* Front of card */}
-            <div className="absolute inset-0 w-full h-full backface-hidden bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
-              <img 
-                src={getWorkshopImage(workshop)} 
-                alt={workshop}
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-lifecore-navy/60 to-transparent"></div>
-              <div className="absolute bottom-1 left-1 right-1">
-                <span className="text-xs font-medium text-white text-center leading-tight block">
-                  {workshop}
-                </span>
-              </div>
-            </div>
-            
-            {/* Back of card */}
-            <div className="absolute inset-0 w-full h-full backface-hidden rotate-y-180 bg-lifecore-navy rounded-lg shadow-sm flex items-center justify-center p-2">
-              <span className="text-xs text-white text-center leading-tight">
-                {workshopDescriptions[workshop] || "Hands-on life skills workshop designed to build real competence"}
+    <div className={`p-4 ${bgColor} rounded-lg aspect-square min-h-[150px]`}>
+      <div 
+        className="group relative h-full w-full perspective-1000 cursor-pointer"
+        onClick={() => {
+          const link = workshopLinks[workshop];
+          if (link) {
+            window.open(link, '_blank');
+          }
+        }}
+      >
+        <div className="relative h-full w-full transition-transform duration-500 preserve-3d group-hover:rotate-y-180">
+          {/* Front of card */}
+          <div className="absolute inset-0 w-full h-full backface-hidden bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+            <img 
+              src={getWorkshopImage(workshop)} 
+              alt={workshop}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-lifecore-navy/60 to-transparent"></div>
+            <div className="absolute bottom-2 left-2 right-2">
+              <span className="text-sm font-medium text-white text-center leading-tight block">
+                {workshop}
               </span>
             </div>
           </div>
+          
+          {/* Back of card */}
+          <div className="absolute inset-0 w-full h-full backface-hidden rotate-y-180 bg-lifecore-navy rounded-lg shadow-sm flex items-center justify-center p-3">
+            <span className="text-sm text-white text-center leading-tight">
+              {workshopDescriptions[workshop] || "Hands-on life skills workshop designed to build real competence"}
+            </span>
+          </div>
         </div>
-      ))}
+      </div>
     </div>
   );
 };
@@ -234,11 +219,11 @@ const LifeCoreCurriculum = () => {
                   {grade}
                 </div>
                 
-                <WorkshopCard workshops={subjects["Teamwork/Leadership"]} bgColor="bg-blue-50" />
-                <WorkshopCard workshops={subjects["Storytelling/Public Speaking"]} bgColor="bg-green-50" />
-                <WorkshopCard workshops={subjects["Entrepreneurship/Financial literacy"]} bgColor="bg-yellow-50" />
-                <WorkshopCard workshops={subjects["Relationship Building/Socialization"]} bgColor="bg-purple-50" />
-                <WorkshopCard workshops={subjects["Grit/Hard Work"]} bgColor="bg-red-50" />
+                <WorkshopCard workshop={subjects["Teamwork/Leadership"]} bgColor="bg-blue-50" />
+                <WorkshopCard workshop={subjects["Storytelling/Public Speaking"]} bgColor="bg-green-50" />
+                <WorkshopCard workshop={subjects["Entrepreneurship/Financial literacy"]} bgColor="bg-yellow-50" />
+                <WorkshopCard workshop={subjects["Relationship Building/Socialization"]} bgColor="bg-purple-50" />
+                <WorkshopCard workshop={subjects["Grit/Hard Work"]} bgColor="bg-red-50" />
               </div>
             ))}
           </div>
