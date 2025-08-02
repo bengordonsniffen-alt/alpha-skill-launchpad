@@ -20,6 +20,7 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         hero: "bg-gradient-to-r from-lifecore-navy to-primary text-white hover:scale-105 shadow-elegant hover:shadow-xl border-0",
         cta: "bg-lifecore-navy text-white hover:bg-lifecore-navy/90 shadow-soft hover:shadow-elegant transform hover:-translate-y-0.5",
+        light: "bg-white text-lifecore-navy border border-lifecore-navy/20 hover:bg-gray-50 shadow-md hover:shadow-lg",
       },
       size: {
         default: "h-10 px-4 py-2",

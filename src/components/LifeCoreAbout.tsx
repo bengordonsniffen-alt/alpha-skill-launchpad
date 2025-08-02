@@ -43,7 +43,7 @@ const LifeCoreAbout = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 justify-items-center">
           {features.map((feature, index) => {
             const IconComponent = feature.icon;
             return (

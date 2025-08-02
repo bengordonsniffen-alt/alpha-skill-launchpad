@@ -36,7 +36,7 @@ const LifeCoreHero = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
             <Button 
-              variant="hero" 
+              variant="light" 
               size="lg" 
               onClick={scrollToApplication}
               className="text-lg px-8 py-4"
@@ -44,10 +44,10 @@ const LifeCoreHero = () => {
               Apply Now
             </Button>
             <Button 
-              variant="outline" 
+              variant="light" 
               size="lg" 
               onClick={() => document.getElementById('curriculum')?.scrollIntoView({ behavior: 'smooth' })}
-              className="text-lg px-8 py-4 border-white/30 text-white hover:bg-white/10"
+              className="text-lg px-8 py-4"
             >
               See Our Curriculum
             </Button>
