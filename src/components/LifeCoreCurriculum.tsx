@@ -342,8 +342,12 @@ const LifeCoreCurriculum = () => {
     console.log('Share button clicked');
     
     try {
-      // Check if Web Share API is available
-      if (navigator.share) {
+      // Check if Web Share API is available and supported
+      if (navigator.share && navigator.canShare && navigator.canShare({
+        title: 'Life Skills Curriculum',
+        text: 'Check out this amazing curriculum that teaches kids real-world skills through hands-on workshops!',
+        url: window.location.href
+      })) {
         console.log('Using Web Share API');
         await navigator.share({
           title: 'Life Skills Curriculum',
@@ -355,44 +359,54 @@ const LifeCoreCurriculum = () => {
           title: "Shared successfully!",
           description: "The curriculum has been shared.",
         });
+        return;
+      }
+    } catch (error) {
+      console.log('Web Share API failed, falling back to clipboard:', error);
+      // Continue to clipboard fallback
+    }
+
+    // Fallback to clipboard (this will run if Web Share API fails or isn't available)
+    try {
+      console.log('Using clipboard fallback');
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(window.location.href);
+        console.log('Clipboard API succeeded');
+        toast({
+          title: "Link copied!",
+          description: "The curriculum link has been copied to your clipboard.",
+        });
       } else {
-        console.log('Web Share API not available, using clipboard');
-        // Fallback to clipboard
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          await navigator.clipboard.writeText(window.location.href);
-          console.log('Clipboard API succeeded');
-          toast({
-            title: "Link copied!",
-            description: "The curriculum link has been copied to your clipboard.",
-          });
-        } else {
-          console.log('Clipboard API not available, using legacy method');
-          // Legacy fallback
-          const textArea = document.createElement('textarea');
-          textArea.value = window.location.href;
-          document.body.appendChild(textArea);
-          textArea.select();
-          document.execCommand('copy');
-          document.body.removeChild(textArea);
+        console.log('Clipboard API not available, using legacy method');
+        // Legacy fallback
+        const textArea = document.createElement('textarea');
+        textArea.value = window.location.href;
+        textArea.style.position = 'fixed';
+        textArea.style.left = '-999999px';
+        textArea.style.top = '-999999px';
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        const successful = document.execCommand('copy');
+        document.body.removeChild(textArea);
+        
+        if (successful) {
           console.log('Legacy clipboard method succeeded');
           toast({
             title: "Link copied!",
             description: "The curriculum link has been copied to your clipboard.",
           });
+        } else {
+          throw new Error('Legacy copy method failed');
         }
       }
-    } catch (error) {
-      console.error('Share failed:', error);
-      if (error.name === 'AbortError') {
-        console.log('User cancelled sharing');
-        // Don't show error for user cancellation
-      } else {
-        toast({
-          title: "Share failed",
-          description: "Unable to share. You can manually copy the URL from your browser.",
-          variant: "destructive",
-        });
-      }
+    } catch (clipboardError) {
+      console.error('All sharing methods failed:', clipboardError);
+      toast({
+        title: "Share not available",
+        description: `Please copy this link manually: ${window.location.href}`,
+        variant: "destructive",
+      });
     } finally {
       setIsSharing(false);
     }
