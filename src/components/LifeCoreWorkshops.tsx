@@ -9,45 +9,45 @@ const workshops = [
     title: "Teamwork & Leadership",
     image: teamworkImage,
     description: [
-      "Collaborate effectively with others",
-      "Make strategic decisions confidently", 
-      "Motivate others toward shared goals"
+      "Work well with others",
+      "Lead with confidence", 
+      "Get others to follow them"
     ]
   },
   {
     title: "Storytelling & Public Speaking",
     image: storytellingImage,
     description: [
-      "Express ideas clearly and confidently",
-      "Connect with any audience",
-      "Use body language effectively"
+      "Speak up and be heard",
+      "Win over any crowd",
+      "Command the room"
     ]
   },
   {
     title: "Entrepreneurship & Financial Literacy",
     image: entrepreneurshipImage,
     description: [
-      "Turn ideas into real opportunities",
-      "Earn, save, and invest wisely",
-      "Create genuine value for others"
+      "Make ideas happen",
+      "Handle money like a pro",
+      "Build something people want"
     ]
   },
   {
     title: "Relationship Building & Socialization",
     image: relationshipImage,
     description: [
-      "Build relationships and make friends",
-      "Navigate any social situation",
-      "Resolve conflicts constructively"
+      "Make friends easily",
+      "Fit in anywhere",
+      "Handle drama without stress"
     ]
   },
   {
     title: "Grit & Hard Work",
     image: gritImage,
     description: [
-      "Keep moving toward goals despite setbacks",
-      "Manage effort effectively over time",
-      "Build confidence to stretch capabilities"
+      "Never give up",
+      "Stay focused on what matters",
+      "Push past their limits"
     ]
   }
 ];
