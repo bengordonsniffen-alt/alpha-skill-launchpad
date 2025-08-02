@@ -133,4 +133,27 @@ All colors MUST be HSL.
   .group:hover .group-hover\:rotate-y-180 { 
     transform: rotateY(180deg); 
   }
+  
+  /* Life Skills Grid Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .grade-row {
+    background: linear-gradient(135deg, rgba(255,255,255,0.8) 0%, rgba(59,130,246,0.05) 50%, rgba(255,255,255,0.8) 100%);
+    animation: fadeInUp 0.6s ease-out both;
+  }
+  
+  .grade-row-0 { animation-delay: 0s; }
+  .grade-row-1 { animation-delay: 0.1s; }
+  .grade-row-2 { animation-delay: 0.2s; }
+  .grade-row-3 { animation-delay: 0.3s; }
+  .grade-row-4 { animation-delay: 0.4s; }
 }
