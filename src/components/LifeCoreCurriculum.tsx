@@ -20,6 +20,7 @@ import startupFounderImage from "@/assets/startup-founder.jpg";
 import globalTeachingAmbassadorImage from "@/assets/global-teaching-ambassador.jpg";
 import spartanRaceFinisherImage from "@/assets/spartan-race-finisher.jpg";
 import alphaNewsLiveStudentsImage from "@/assets/alpha-news-live-students.jpg";
+import alphaNewsLiveRealisticImage from "@/assets/alpha-news-live-realistic.jpg";
 
 // Helper function to extract YouTube video ID from URL
 const getYouTubeVideoId = (url: string): string | null => {
@@ -195,7 +196,7 @@ const workshopDescriptions = {
 };
 
 const workshopLinks = {
-  "Alpha News Live": alphaNewsLiveStudentsImage,
+  "Alpha News Live": alphaNewsLiveRealisticImage,
   "5-Mile Bike Challenge": "https://www.youtube.com/watch?v=GNVKlZ8Rcto",
   "Friendship Coordinator": "https://www.youtube.com/watch?v=MjziE_v_AIA",
   "Escape Room Expert": "https://www.youtube.com/watch?v=M34nou_PXMs",
