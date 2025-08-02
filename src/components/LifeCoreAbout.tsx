@@ -10,12 +10,12 @@ const features = [
   {
     icon: Target,
     title: "Real-Stakes Practice",
-    description: "Students practice life skills in real-world settings with genuine consequences - like running actual businesses, delivering TED talks to live audiences, and tackling meaningful community challenges."
+    description: "Learn it, then live it. From running businesses to delivering TED talks, students face the real world with real consequences."
   },
   {
     icon: Users,
     title: "Direct Instruction",
-    description: "Life skills can be developed through direct instruction and consistent practice. We teach systematically, not hope they pick it up."
+    description: "Life skills can be developed through direct instruction and consistent practice. We teach systematically, starting with the basics and layering on more complexity."
   },
   {
     icon: BookOpen,
@@ -25,12 +25,12 @@ const features = [
   {
     icon: Heart,
     title: "Interconnected Skills",
-    description: "Life skills are interconnected abilities, not isolated traits. Students see how teamwork enhances speaking, how grit supports relationships."
+    description: "No skill exists in a vacuum. At Alpha, students see how strengths connect and multiply."
   },
   {
     icon: Target,
     title: "Limitless Potential",
-    description: "All kids have limitless potential to master any life skill with the right instruction, practice, and motivation. Individual variability is the rule, not the exception."
+    description: "All kids have limitless potential to master any life skill with the right instruction, practice, and motivation."
   }
 ];
 
