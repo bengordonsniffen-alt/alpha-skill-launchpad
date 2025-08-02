@@ -206,7 +206,8 @@ const workshopLinks = {
   "Public Sales Challenge: Sell to Strangers in Public": "/lovable-uploads/35cfa662-936f-40c9-99c4-2084c0ca6f27.png",
   "TEDx Speaker": "/lovable-uploads/49cef88c-c80c-4ebf-9059-d475408eb5cf.png",
   "Startup Founder": "https://www.youtube.com/watch?v=B10wOUFDAIk",
-  "Spartan Race Finisher": "https://www.youtube.com/watch?v=W9V0dsmhsv8"
+  "Spartan Race Finisher": "https://www.youtube.com/watch?v=W9V0dsmhsv8",
+  "Podcast Host": "/lovable-uploads/5e29f922-2918-4b7a-a004-1b6991d9e9c9.png"
 };
 
 const WorkshopCard = ({ workshop, bgColor }: { workshop: string, bgColor: string }) => {
