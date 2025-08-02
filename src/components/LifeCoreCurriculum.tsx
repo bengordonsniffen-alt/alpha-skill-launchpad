@@ -281,10 +281,10 @@ const LifeCoreCurriculum = () => {
                   grade === "9-12" ? "bg-lifecore-light-blue/70 text-lifecore-navy" :
                   "bg-gray-100 text-gray-800"
                 }`}>
-                  <div className="leading-tight">
+                  <div className="leading-tight text-lg font-bold">
                     {grade === "PreK" ? "PreK" : `Grades ${grade}`}
                   </div>
-                  <div className="text-sm text-gray-600 mt-1 font-normal">
+                  <div className="text-base text-gray-600 mt-1 font-medium">
                     {grade === "PreK" ? "3-4 years" :
                      grade === "K-1" ? "5-6 years" :
                      grade === "2-3" ? "7-8 years" :
