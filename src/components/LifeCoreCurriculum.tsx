@@ -127,7 +127,7 @@ const workshopDescriptions = {
   "Water for Life Project": "Raise and donate money to provide fresh water",
   "AI Teaching Assistant: Use AI to teach a classmate a skill": "Use AI tools to teach a peer a new skill",
   "5-Mile Bike Challenge": "Train to ride 5 miles without stopping",
-  "Escape Room Expert": "Use uplifting language while beating an escape room as a team",
+  "Escape Room Expert": "Use uplifting language to beat an escape room as a team",
   "Public Sales Challenge: Sell to Strangers in Public": "Develop confidence by selling to strangers",
   "Friendship Coordinator": "Set up and manage your own playdates",
   "Rubik's Cube Solver": "Independently solve a Rubik's cube",
@@ -239,33 +239,35 @@ const LifeCoreCurriculum = () => {
         
         <div className="overflow-x-auto">
           <div className="min-w-[800px]">
-            {/* Header */}
-            <div className="grid grid-cols-6 gap-2 mb-4">
-              <div className="font-bold text-lifecore-navy text-center p-4"></div>
-              <div className="font-bold text-lifecore-navy text-center p-4 bg-orange-50 rounded-lg flex flex-col justify-center items-center leading-tight">
-                <div>Teamwork</div>
-                <div className="text-sm my-1">+</div>
-                <div>Leadership</div>
-              </div>
-              <div className="font-bold text-lifecore-navy text-center p-4 bg-green-50 rounded-lg flex flex-col justify-center items-center leading-tight">
-                <div>Storytelling</div>
-                <div className="text-sm my-1">+</div>
-                <div>Public Speaking</div>
-              </div>
-              <div className="font-bold text-lifecore-navy text-center p-4 bg-yellow-50 rounded-lg flex flex-col justify-center items-center leading-tight">
-                <div>Entrepreneurship</div>
-                <div className="text-sm my-1">+</div>
-                <div>Financial Literacy</div>
-              </div>
-              <div className="font-bold text-lifecore-navy text-center p-4 bg-purple-50 rounded-lg flex flex-col justify-center items-center leading-tight">
-                <div>Relationship Building</div>
-                <div className="text-sm my-1">+</div>
-                <div>Socialization</div>
-              </div>
-              <div className="font-bold text-lifecore-navy text-center p-4 bg-red-50 rounded-lg flex flex-col justify-center items-center leading-tight">
-                <div>Grit</div>
-                <div className="text-sm my-1">+</div>
-                <div>Hard Work</div>
+            {/* Sticky Header */}
+            <div className="sticky top-0 z-10 bg-white/95 backdrop-blur-sm border-b border-gray-200 pb-4 mb-4">
+              <div className="grid grid-cols-6 gap-2">
+                <div className="font-bold text-lifecore-navy text-center p-4"></div>
+                <div className="font-bold text-lifecore-navy text-center p-4 bg-orange-50 rounded-lg flex flex-col justify-center items-center leading-tight">
+                  <div>Teamwork</div>
+                  <div className="text-sm my-1">+</div>
+                  <div>Leadership</div>
+                </div>
+                <div className="font-bold text-lifecore-navy text-center p-4 bg-green-50 rounded-lg flex flex-col justify-center items-center leading-tight">
+                  <div>Storytelling</div>
+                  <div className="text-sm my-1">+</div>
+                  <div>Public Speaking</div>
+                </div>
+                <div className="font-bold text-lifecore-navy text-center p-4 bg-yellow-50 rounded-lg flex flex-col justify-center items-center leading-tight">
+                  <div>Entrepreneurship</div>
+                  <div className="text-sm my-1">+</div>
+                  <div>Financial Literacy</div>
+                </div>
+                <div className="font-bold text-lifecore-navy text-center p-4 bg-purple-50 rounded-lg flex flex-col justify-center items-center leading-tight">
+                  <div>Relationship Building</div>
+                  <div className="text-sm my-1">+</div>
+                  <div>Socialization</div>
+                </div>
+                <div className="font-bold text-lifecore-navy text-center p-4 bg-red-50 rounded-lg flex flex-col justify-center items-center leading-tight">
+                  <div>Grit</div>
+                  <div className="text-sm my-1">+</div>
+                  <div>Hard Work</div>
+                </div>
               </div>
             </div>
             
