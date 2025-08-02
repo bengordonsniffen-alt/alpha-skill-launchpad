@@ -6,7 +6,7 @@ import storytellingImage from "@/assets/storytelling-speaking.jpg";
 import entrepreneurshipImage from "@/assets/entrepreneurship-financial.jpg";
 import relationshipImage from "@/assets/relationship-building.jpg";
 import gritImage from "@/assets/grit-hardwork.jpg";
-import picnicPlannersImage from "@/assets/picnic-planners.jpg";
+import picnicPlannersImage from "@/assets/picnic-planners-updated.jpg";
 import parentReportingImage from "@/assets/parent-reporting.jpg";
 import legoMasterBuilderImage from "@/assets/lego-master-builder.jpg";
 import fairPlayAcademyImage from "@/assets/fair-play-academy.jpg";
@@ -177,11 +177,11 @@ const workshopNames = {
 };
 
 const workshopDescriptions = {
-  "Picnic Planners: Follow directions to plan a picnic for my class": "Plan and organize a complete class picnic",
+  "Picnic Planners: Follow directions to plan a picnic for my class": "Plan an in-school playdate with a new friend",
   "Parent Reporting": "Learn to ask questions and listen to conduct parent interviews",
-  "Alpha Savers: Save school currency called Alphas": "Learn to save and count classroom currency called Alphas",
-  "Playdate Pals: Learn to share and make friends": "Practice sharing, taking turns, and building friendships through play",
-  "LEGO Master Builder": "Build complex LEGO structures (100-500 pieces)",
+  "Alpha Savers: Save school currency called Alphas": "Build early saving habits to spend and donate",
+  "Playdate Pals: Learn to share and make friends": "Plan an in-school playdate with a new friend",
+  "LEGO Master Builder": "Persist through failure while building 100+ piece LEGO structures",
   "Fair Play Academy": "Join games and learn to play fairly",
   "Family Theatre": "Put on theatrical productions for families",
   "Alpha News Live": "Present the news live in front of the entire school",
