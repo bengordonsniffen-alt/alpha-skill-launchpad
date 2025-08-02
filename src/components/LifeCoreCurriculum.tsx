@@ -206,6 +206,7 @@ const WorkshopCard = ({ workshop, bgColor }: { workshop: string, bgColor: string
   const displayTitle = workshopTitle.trim();
   const displayDescription = workshopDesc ? workshopDesc.trim() : workshopDescriptions[workshop];
   const hasLink = !!workshopLinks[workshop];
+  const isVideoLink = hasLink && (workshopLinks[workshop].includes('youtube.com') || workshopLinks[workshop].includes('youtu.be') || workshopLinks[workshop].includes('canva.com') || workshopLinks[workshop].includes('vimeo.com'));
 
   return (
     <div 
@@ -229,8 +230,8 @@ const WorkshopCard = ({ workshop, bgColor }: { workshop: string, bgColor: string
           />
           <div className="absolute inset-0 bg-gradient-to-t from-lifecore-navy/60 to-transparent"></div>
           
-          {/* Small play button in top left for linked videos */}
-          {hasLink && (
+          {/* Small play button in top left for linked videos only */}
+          {isVideoLink && (
             <div className="absolute top-1 left-1">
               <div className="bg-white/90 rounded-full p-1 shadow-md">
                 <svg className="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 24 24">
