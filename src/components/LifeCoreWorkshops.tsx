@@ -19,7 +19,7 @@ const workshops = [
     image: storytellingImage,
     description: [
       "Present confidently to any audience",
-      "Deliver TED talks and podcasts",
+      "Communicate with clear structure",
       "Engage with compelling stories"
     ]
   },
@@ -29,7 +29,7 @@ const workshops = [
     description: [
       "Run real businesses",
       "Manage money and investments",
-      "Pitch ideas to investors"
+      "Present ideas persuasively"
     ]
   },
   {
