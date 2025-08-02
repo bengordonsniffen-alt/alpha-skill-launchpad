@@ -193,7 +193,8 @@ const workshopLinks = {
   "Business Launch Pad": "https://www.youtube.com/watch?v=4IL5TOk-2r4",
   "Code & Create Team": "https://www.youtube.com/watch?v=pUByfy0vcEs",
   "Pirates & Sailing Crew": "https://www.youtube.com/watch?v=IxOR6gacPZ0",
-  "LEGO Master Builder": "/lovable-uploads/ecabc4db-0d06-42fe-8d6f-a5a40c8a8a5c.png"
+  "LEGO Master Builder": "/lovable-uploads/ecabc4db-0d06-42fe-8d6f-a5a40c8a8a5c.png",
+  "Public Sales Challenge: Sell to Strangers in Public": "/lovable-uploads/35cfa662-936f-40c9-99c4-2084c0ca6f27.png"
 };
 
 const WorkshopCard = ({ workshop, bgColor }: { workshop: string, bgColor: string }) => {
