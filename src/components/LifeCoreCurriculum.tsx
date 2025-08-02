@@ -200,6 +200,7 @@ const workshopDescriptions = {
 
 const workshopLinks = {
   "Alpha News Live": alphaNewsLiveRealisticImage,
+  "Alpha Savers: Save school currency called Alphas": alphaSaversPreKImage,
   "5-Mile Bike Challenge": "https://www.youtube.com/watch?v=GNVKlZ8Rcto",
   "Friendship Coordinator": "https://www.youtube.com/watch?v=MjziE_v_AIA",
   "Escape Room Expert": "https://www.youtube.com/watch?v=M34nou_PXMs",
