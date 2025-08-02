@@ -37,8 +37,9 @@ const getCanvaPreview = (url: string): string => {
   // Extract design ID from Canva URL
   const designIdMatch = url.match(/design\/([^\/]+)/);
   if (designIdMatch) {
-    // Use Canva's thumbnail API
-    return `https://www.canva.com/api/media/designs/${designIdMatch[1]}/thumbnail/0?format=jpg&width=400&height=300`;
+    // Use a specific timestamp (e.g., 10 seconds in) to capture a frame with kids
+    // Format: ?time=10 gets frame at 10 seconds, adjust as needed
+    return `https://www.canva.com/api/media/designs/${designIdMatch[1]}/thumbnail/0?format=jpg&width=400&height=300&time=15`;
   }
   return "";
 };
