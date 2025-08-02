@@ -181,7 +181,7 @@ const workshopDescriptions = {
   "Question Club": "Learn to ask questions and listen to conduct parent interviews",
   "Alpha Savers: Save school currency called Alphas": "Build early saving habits to spend and donate",
   "Playdate Pals: Learn to share and make friends": "Plan an in-school playdate with a new friend",
-  "LEGO Master Builder": "Persist through failure while building 100+ piece LEGO structures",
+  "LEGO Master Builder": "Persist through failure to complete a 100+ piece LEGO set",
   "Fair Play Academy": "Join games and learn to play fairly",
   "Family Theatre": "Put on theatrical productions for families",
   "Alpha News Live": "Present the news live in front of the entire school",
