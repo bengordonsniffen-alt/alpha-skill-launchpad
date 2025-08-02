@@ -10,6 +10,15 @@ const LifeCoreHero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Alpha Logo in top left */}
+      <div className="absolute top-6 left-6 z-20">
+        <img 
+          src="/lovable-uploads/b7097948-e8e0-4107-a58f-d83461f1dde3.png"
+          alt="Alpha Logo"
+          className="h-12 w-auto filter brightness-0 invert"
+        />
+      </div>
+      
       {/* Background with gradient overlay */}
       <div className="absolute inset-0">
         <img 
