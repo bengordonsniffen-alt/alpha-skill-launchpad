@@ -8,31 +8,56 @@ const workshops = [
   {
     title: "Teamwork & Leadership",
     image: teamworkImage,
-    description: "From following multi-step directions in PreK to succeeding in high-pressure escape rooms in middle school, students develop real collaboration skills. They learn to lead teams, solve complex problems together, and take initiative in group settings.",
+    description: [
+      "Follow multi-step directions from PreK through middle school",
+      "Succeed in high-pressure escape rooms and team challenges",
+      "Lead teams and solve complex problems together",
+      "Take initiative in group settings"
+    ],
     skills: ["Multi-step direction following", "Team problem solving", "Leadership development", "Group communication"]
   },
   {
     title: "Storytelling & Public Speaking",
     image: storytellingImage,
-    description: "Students progress from simple show-and-tell to delivering TED talks and podcast appearances. They develop confidence, clear communication, and the ability to engage any audience with compelling stories.",
+    description: [
+      "Progress from simple show-and-tell to TED talks",
+      "Make podcast appearances and media presentations",
+      "Develop confidence and clear communication",
+      "Engage any audience with compelling stories"
+    ],
     skills: ["Confident presentation", "Story structure", "Audience engagement", "Media appearances"]
   },
   {
     title: "Entrepreneurship & Financial Literacy",
     image: entrepreneurshipImage,
-    description: "Real-world business experience starts early. Students run actual businesses, manage money, create financial proposals, and learn to pitch ideas to investors. They graduate understanding how money works in the real world.",
+    description: [
+      "Run actual businesses and manage real money",
+      "Create financial proposals and pitch to investors",
+      "Gain real-world business experience early",
+      "Understand how money works in the real world"
+    ],
     skills: ["Business management", "Financial planning", "Investment pitching", "Money management"]
   },
   {
     title: "Relationship Building & Socialization",
     image: relationshipImage,
-    description: "From one-on-one playdates to organizing community events, students learn to build genuine connections. They develop empathy, conflict resolution skills, and the ability to work with people from all backgrounds.",
+    description: [
+      "Build genuine connections from playdates to community events",
+      "Develop empathy and conflict resolution skills",
+      "Work effectively with people from all backgrounds",
+      "Organize and coordinate group activities"
+    ],
     skills: ["Conflict resolution", "Empathy development", "Community organizing", "Cross-cultural communication"]
   },
   {
     title: "Grit & Hard Work",
     image: gritImage,
-    description: "Students tackle increasingly challenging projects that push their limits. From building with LEGOs to completing triathlons and solving complex puzzles, they learn that persistence pays off.",
+    description: [
+      "Tackle increasingly challenging projects",
+      "Build with LEGOs to completing triathlons",
+      "Solve complex puzzles that push limits",
+      "Learn that persistence always pays off"
+    ],
     skills: ["Persistence through challenges", "Physical endurance", "Complex problem solving", "Goal achievement"]
   }
 ];
@@ -70,9 +95,14 @@ const LifeCoreWorkshops = () => {
               </div>
               
               <div className="p-6">
-                <p className="text-gray-700 mb-6 leading-relaxed">
-                  {workshop.description}
-                </p>
+                <ul className="mb-6 space-y-2">
+                  {workshop.description.map((point, pointIndex) => (
+                    <li key={pointIndex} className="flex items-start text-gray-700">
+                      <div className="w-1.5 h-1.5 bg-lifecore-light-blue rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      {point}
+                    </li>
+                  ))}
+                </ul>
                 
                 <div>
                   <h4 className="font-semibold text-lifecore-navy mb-3">Key Skills Developed:</h4>
