@@ -15,7 +15,7 @@ const features = [
   {
     icon: Users,
     title: "Direct Instruction",
-    description: "Life skills can be developed through direct instruction and consistent practice. We teach systematically, starting with the basics and layering on more complexity."
+    description: "We teach life skills like any essential subject—systematically, starting with the basics and building up."
   },
   {
     icon: BookOpen,
