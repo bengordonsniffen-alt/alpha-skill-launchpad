@@ -111,7 +111,11 @@ const workshopDescriptions = {
 
 const workshopLinks = {
   "5-Mile Bike Challenge": "https://www.youtube.com/watch?v=GNVKlZ8Rcto",
-  "Friendship Coordinator": "https://www.youtube.com/watch?v=MjziE_v_AIA"
+  "Friendship Coordinator": "https://www.youtube.com/watch?v=MjziE_v_AIA",
+  "Escape Room Expert": "https://www.youtube.com/watch?v=M34nou_PXMs",
+  "Rubik's Cube Solver": "https://www.youtube.com/watch?v=TFtRq--ZKDs",
+  "Business Launch Pad": "https://www.youtube.com/watch?v=4IL5TOk-2r4",
+  "Code & Create Team": "https://www.youtube.com/watch?v=pUByfy0vcEs"
 };
 
 const WorkshopCard = ({ workshop, bgColor }: { workshop: string, bgColor: string }) => {
