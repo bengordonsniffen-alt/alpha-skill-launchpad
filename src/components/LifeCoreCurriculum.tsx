@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import MediaModal from './MediaModal';
+import { useToast } from '@/hooks/use-toast';
 import teamworkImage from "@/assets/teamwork-leadership.jpg";
 import storytellingImage from "@/assets/storytelling-speaking.jpg";
 import entrepreneurshipImage from "@/assets/entrepreneurship-financial.jpg";
@@ -331,6 +332,72 @@ const WorkshopCard = ({ workshop, bgColor }: { workshop: string, bgColor: string
 };
 
 const LifeCoreCurriculum = () => {
+  const { toast } = useToast();
+  const [isSharing, setIsSharing] = useState(false);
+
+  const handleShare = async () => {
+    if (isSharing) return; // Prevent multiple clicks
+    
+    setIsSharing(true);
+    console.log('Share button clicked');
+    
+    try {
+      // Check if Web Share API is available
+      if (navigator.share) {
+        console.log('Using Web Share API');
+        await navigator.share({
+          title: 'Life Skills Curriculum',
+          text: 'Check out this amazing curriculum that teaches kids real-world skills through hands-on workshops!',
+          url: window.location.href
+        });
+        console.log('Web Share API succeeded');
+        toast({
+          title: "Shared successfully!",
+          description: "The curriculum has been shared.",
+        });
+      } else {
+        console.log('Web Share API not available, using clipboard');
+        // Fallback to clipboard
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          await navigator.clipboard.writeText(window.location.href);
+          console.log('Clipboard API succeeded');
+          toast({
+            title: "Link copied!",
+            description: "The curriculum link has been copied to your clipboard.",
+          });
+        } else {
+          console.log('Clipboard API not available, using legacy method');
+          // Legacy fallback
+          const textArea = document.createElement('textarea');
+          textArea.value = window.location.href;
+          document.body.appendChild(textArea);
+          textArea.select();
+          document.execCommand('copy');
+          document.body.removeChild(textArea);
+          console.log('Legacy clipboard method succeeded');
+          toast({
+            title: "Link copied!",
+            description: "The curriculum link has been copied to your clipboard.",
+          });
+        }
+      }
+    } catch (error) {
+      console.error('Share failed:', error);
+      if (error.name === 'AbortError') {
+        console.log('User cancelled sharing');
+        // Don't show error for user cancellation
+      } else {
+        toast({
+          title: "Share failed",
+          description: "Unable to share. You can manually copy the URL from your browser.",
+          variant: "destructive",
+        });
+      }
+    } finally {
+      setIsSharing(false);
+    }
+  };
+
   return (
     <section id="curriculum" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -473,25 +540,25 @@ const LifeCoreCurriculum = () => {
             </button>
             
             <button 
-              onClick={() => {
-                if (navigator.share) {
-                  navigator.share({
-                    title: 'Life Skills Curriculum',
-                    text: 'Check out this amazing curriculum that teaches kids real-world skills through hands-on workshops!',
-                    url: window.location.href
-                  });
-                } else {
-                  navigator.clipboard.writeText(window.location.href).then(() => {
-                    alert('Link copied to clipboard!');
-                  });
-                }
-              }}
-              className="flex items-center gap-2 px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
+              onClick={handleShare}
+              disabled={isSharing}
+              className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-200 ${
+                isSharing 
+                  ? 'bg-gray-400 text-white cursor-not-allowed' 
+                  : 'bg-gray-600 text-white hover:bg-gray-700 hover:scale-105'
+              }`}
             >
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/>
-              </svg>
-              Share
+              {isSharing ? (
+                <svg className="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+              ) : (
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/>
+                </svg>
+              )}
+              {isSharing ? 'Sharing...' : 'Share'}
             </button>
           </div>
         </div>
