@@ -156,7 +156,7 @@ const workshopNames = {
   "2-3": {
     "Teamwork/Leadership": "Escape Room Expert",
     "Storytelling/Public Speaking": "Alpha News Live",
-    "Entrepreneurship/Financial literacy": "Public Sales Challenge: Sell to Strangers in Public",
+    "Entrepreneurship/Financial literacy": "Public Sales Challenge: Pitch and sell to new people in the real world",
     "Relationship Building/Socialization": "Friendship Coordinator",
     "Grit/Hard Work": "Rubik's Cube Solver"
   },
@@ -189,7 +189,7 @@ const workshopDescriptions = {
   "AI Teaching Assistant: Use AI to teach a classmate a skill": "Use AI tools to teach a peer a new skill",
   "5-Mile Bike Challenge": "Train to ride 5 miles without stopping",
   "Escape Room Expert": "Use uplifting language to beat an escape room as a team",
-  "Public Sales Challenge: Sell to Strangers in Public": "Pitch and sell to new people in the real world",
+  "Public Sales Challenge: Pitch and sell to new people in the real world": "Pitch and sell to new people in the real world",
   "Friendship Coordinator": "Set up and manage your own playdates",
   "Rubik's Cube Solver": "Independently solve a Rubik's cube",
   "Code & Create Team": "Code self-driving cars, drones, and video games with a partner",
@@ -222,7 +222,7 @@ const workshopLinks = {
   "Code & Create Team": "https://www.youtube.com/watch?v=pUByfy0vcEs",
   "Pirates & Sailing Crew": "https://www.youtube.com/watch?v=IxOR6gacPZ0",
   "LEGO Master Builder": "/lovable-uploads/ecabc4db-0d06-42fe-8d6f-a5a40c8a8a5c.png",
-  "Public Sales Challenge: Sell to Strangers in Public": "/lovable-uploads/35cfa662-936f-40c9-99c4-2084c0ca6f27.png",
+  "Public Sales Challenge: Pitch and sell to new people in the real world": "/lovable-uploads/35cfa662-936f-40c9-99c4-2084c0ca6f27.png",
   "TEDx Speaker": "/lovable-uploads/49cef88c-c80c-4ebf-9059-d475408eb5cf.png",
   "Startup Founder": "https://www.youtube.com/watch?v=B10wOUFDAIk",
   "Spartan Race Finisher": "https://www.youtube.com/watch?v=W9V0dsmhsv8",
