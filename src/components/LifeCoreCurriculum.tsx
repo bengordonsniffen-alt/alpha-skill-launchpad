@@ -122,7 +122,8 @@ const workshopDescriptions = {
 };
 
 const workshopLinks = {
-  "5-Mile Bike Challenge": "https://www.youtube.com/watch?v=GNVKlZ8Rcto"
+  "5-Mile Bike Challenge": "https://www.youtube.com/watch?v=GNVKlZ8Rcto",
+  "Friendship Coordinator": "https://www.youtube.com/watch?v=MjziE_v_AIA"
 };
 
 const WorkshopCard = ({ workshops, bgColor }: { workshops: string[], bgColor: string }) => {
@@ -192,19 +193,19 @@ const LifeCoreCurriculum = () => {
             <div className="grid grid-cols-6 gap-2 mb-4">
               <div className="font-bold text-lifecore-navy text-center p-4">Grade Level</div>
               <div className="font-bold text-lifecore-navy text-center p-4 bg-blue-50 rounded-lg">
-                Teamwork/<br/>Leadership
+                Teamwork &<br/>Leadership
               </div>
               <div className="font-bold text-lifecore-navy text-center p-4 bg-green-50 rounded-lg">
-                Storytelling/<br/>Public Speaking
+                Storytelling &<br/>Public Speaking
               </div>
               <div className="font-bold text-lifecore-navy text-center p-4 bg-yellow-50 rounded-lg">
-                Entrepreneurship/<br/>Financial Literacy
+                Entrepreneurship &<br/>Financial Literacy
               </div>
               <div className="font-bold text-lifecore-navy text-center p-4 bg-purple-50 rounded-lg">
-                Relationship Building/<br/>Socialization
+                Relationship Building &<br/>Socialization
               </div>
               <div className="font-bold text-lifecore-navy text-center p-4 bg-red-50 rounded-lg">
-                Grit/<br/>Hard Work
+                Grit &<br/>Hard Work
               </div>
             </div>
             
