@@ -8,7 +8,7 @@ import relationshipImage from "@/assets/relationship-building.jpg";
 import gritImage from "@/assets/grit-hardwork.jpg";
 import picnicPlannersImage from "@/assets/picnic-planners-updated.jpg";
 import parentReportingImage from "@/assets/parent-reporting.jpg";
-import legoMasterBuilderImage from "@/assets/lego-master-builder.jpg";
+import legoMasterBuilderImage from "@/assets/lego-master-builder-ai.jpg";
 import fairPlayAcademyImage from "@/assets/fair-play-academy.jpg";
 import familyTheatreImage from "@/assets/family-theatre.jpg";
 import waterForLifeProjectImage from "@/assets/water-for-life-project.jpg";
@@ -104,7 +104,7 @@ const getWorkshopImage = (workshopName: string) => {
   if (workshopName.includes("Alpha Savers")) return alphaSaversPreKImage;
   if (workshopName.includes("Playdate Pals")) return playdatePalsPreKImage;
   if (workshopName.includes("Question Club")) return parentReportingImage;
-  if (workshopName.includes("LEGO Master Builder")) return "/lovable-uploads/ecabc4db-0d06-42fe-8d6f-a5a40c8a8a5c.png";
+  if (workshopName.includes("LEGO Master Builder")) return legoMasterBuilderImage;
   if (workshopName.includes("Fair Play Academy")) return fairPlayAcademyImage;
   if (workshopName.includes("Family Theatre")) return familyTheatreImage;
   if (workshopName.includes("Water for Life Project")) return waterForLifeProjectImage;
@@ -221,7 +221,7 @@ const workshopLinks = {
   "Business Launch Pad": "https://www.youtube.com/watch?v=4IL5TOk-2r4",
   "Code & Create Team": "https://www.youtube.com/watch?v=pUByfy0vcEs",
   "Pirates & Sailing Crew": "https://www.youtube.com/watch?v=IxOR6gacPZ0",
-  "LEGO Master Builder": "/lovable-uploads/ecabc4db-0d06-42fe-8d6f-a5a40c8a8a5c.png",
+  "LEGO Master Builder": legoMasterBuilderImage,
   "Public Sales Challenge: Pitch and sell to new people in the real world": "/lovable-uploads/35cfa662-936f-40c9-99c4-2084c0ca6f27.png",
   "TEDx Speaker": "/lovable-uploads/49cef88c-c80c-4ebf-9059-d475408eb5cf.png",
   "Startup Founder": "https://www.youtube.com/watch?v=B10wOUFDAIk",
